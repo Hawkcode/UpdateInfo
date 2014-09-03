@@ -6,7 +6,7 @@ Inherits WebSession
 		  
 		  gnUid = URLParameter("uid").Val
 		  
-		  'MsgBox(Str(gnUid))
+		  'MsgBox("Web UserID = " + Str(gnUid))
 		  
 		  sesWebDB = New WebDB
 		  if not sesWebDB.OpenDB then

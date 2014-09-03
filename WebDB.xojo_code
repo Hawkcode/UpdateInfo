@@ -142,12 +142,6 @@ Inherits MySQLCommunityServer
 			EditorType="MultiLineEditor"
 		#tag EndViewProperty
 		#tag ViewProperty
-			Name="gsUserName"
-			Group="Behavior"
-			Type="String"
-			EditorType="MultiLineEditor"
-		#tag EndViewProperty
-		#tag ViewProperty
 			Name="gsUserNameWS"
 			Group="Behavior"
 			InitialValue="d7upgradedb"

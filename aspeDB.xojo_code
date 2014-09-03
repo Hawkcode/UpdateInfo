@@ -80,7 +80,7 @@ Inherits MySQLCommunityServer
 	#tag EndProperty
 
 	#tag Property, Flags = &h0
-		gsHost As String = "25.204.113.227"
+		gsHost As String = "127.0.0.1"
 	#tag EndProperty
 
 	#tag Property, Flags = &h0
