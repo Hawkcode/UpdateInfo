@@ -26,12 +26,14 @@ Begin WebPage frmUpdateInfo
    Visible         =   True
    Width           =   940
    ZIndex          =   1
+   _DeclareLineRendered=   False
    _HorizontalPercent=   0.0
    _ImplicitInstance=   False
    _IsEmbedded     =   False
    _Locked         =   False
    _NeedsRendering =   True
    _OfficialControl=   False
+   _OpenEventFired =   False
    _ShownEventFired=   False
    _VerticalPercent=   0.0
    Begin conMemInfo conMemInfo1
@@ -63,11 +65,13 @@ Begin WebPage frmUpdateInfo
       Visible         =   True
       Width           =   910
       ZIndex          =   1
+      _DeclareLineRendered=   False
       _HorizontalPercent=   0.0
       _IsEmbedded     =   False
       _Locked         =   False
       _NeedsRendering =   True
       _OfficialControl=   False
+      _OpenEventFired =   False
       _ShownEventFired=   False
       _VerticalPercent=   0.0
    End
@@ -97,11 +101,13 @@ Begin WebPage frmUpdateInfo
       Visible         =   True
       Width           =   910
       ZIndex          =   1
+      _DeclareLineRendered=   False
       _HorizontalPercent=   0.0
       _IsEmbedded     =   False
       _Locked         =   False
       _NeedsRendering =   True
       _OfficialControl=   False
+      _OpenEventFired =   False
       _VerticalPercent=   0.0
    End
    Begin WebLabel Label2
@@ -130,11 +136,13 @@ Begin WebPage frmUpdateInfo
       Visible         =   True
       Width           =   303
       ZIndex          =   1
+      _DeclareLineRendered=   False
       _HorizontalPercent=   0.0
       _IsEmbedded     =   False
       _Locked         =   False
       _NeedsRendering =   True
       _OfficialControl=   False
+      _OpenEventFired =   False
       _VerticalPercent=   0.0
    End
    Begin SMTPServerASPE SMTPServer
