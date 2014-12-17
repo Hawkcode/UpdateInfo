@@ -161,10 +161,45 @@ Begin WebPage frmUpdateInfo
       Top             =   80
       Width           =   32
    End
+   Begin WebLabel lblVersion
+      Cursor          =   1
+      Enabled         =   True
+      HasFocusRing    =   True
+      Height          =   22
+      HelpTag         =   ""
+      HorizontalCenter=   0
+      Index           =   -2147483648
+      Left            =   16
+      LockBottom      =   False
+      LockedInPosition=   False
+      LockHorizontal  =   False
+      LockLeft        =   True
+      LockRight       =   False
+      LockTop         =   True
+      LockVertical    =   False
+      Multiline       =   False
+      Scope           =   0
+      Style           =   "-1"
+      TabOrder        =   2
+      Text            =   ""
+      Top             =   460
+      VerticalCenter  =   0
+      Visible         =   True
+      Width           =   100
+      ZIndex          =   1
+      _NeedsRendering =   True
+   End
 End
 #tag EndWebPage
 
 #tag WindowCode
+	#tag Event
+		Sub Shown()
+		  lblVersion.Text = "Build:" + Str(App.NonReleaseVersion)
+		End Sub
+	#tag EndEvent
+
+
 	#tag Method, Flags = &h0
 		Function CreateMsg() As String
 		  
