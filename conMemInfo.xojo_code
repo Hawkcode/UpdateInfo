@@ -227,7 +227,7 @@ Begin WebContainer conMemInfo
       HelpTag         =   ""
       HorizontalCenter=   0
       Index           =   -2147483648
-      Left            =   247
+      Left            =   233
       LockBottom      =   False
       LockedInPosition=   False
       LockHorizontal  =   False
@@ -237,13 +237,13 @@ Begin WebContainer conMemInfo
       LockVertical    =   False
       Multiline       =   False
       Scope           =   0
-      Style           =   "0"
+      Style           =   "54593926"
       TabOrder        =   61
       Text            =   "Birthday M/D/YYYY:"
       Top             =   105
       VerticalCenter  =   0
       Visible         =   True
-      Width           =   130
+      Width           =   148
       ZIndex          =   1
       _DeclareLineRendered=   False
       _HorizontalPercent=   0.0
@@ -2678,6 +2678,7 @@ Begin WebContainer conMemInfo
       _VerticalPercent=   0.0
    End
    Begin WebButton btnEdit
+      AutoDisable     =   False
       Caption         =   "Edit"
       Cursor          =   0
       Enabled         =   True
@@ -2711,6 +2712,7 @@ Begin WebContainer conMemInfo
       _VerticalPercent=   0.0
    End
    Begin WebButton btnSave
+      AutoDisable     =   False
       Caption         =   "Save"
       Cursor          =   0
       Enabled         =   False
