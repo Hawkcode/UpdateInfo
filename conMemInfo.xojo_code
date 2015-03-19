@@ -3414,7 +3414,7 @@ End
 	#tag Event
 		Sub LostFocus()
 		  Call DidValidate(Me)
-		  if me.Text.InStr(0, "CPD") > 0 and Not mbIsCPD then
+		  if (me.Text.InStr(0, "CPD") > 0 and me.Text.InStr(0, "CPDT") = 0) and Not mbIsCPD then
 		    MsgBox("I'm sorry you can not make yourself a CPD. For more information contact us at: certification@aspe.org.")
 		    me.Text = msNameSuffix
 		  ELSE
