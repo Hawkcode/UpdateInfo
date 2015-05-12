@@ -1845,7 +1845,7 @@ Begin WebContainer conMemInfo
       AutoCapitalize  =   True
       AutoComplete    =   True
       AutoCorrect     =   True
-      CueText         =   ""
+      CueText         =   "Leave Blank for US"
       Cursor          =   0
       Enabled         =   True
       HasFocusRing    =   True
@@ -1887,7 +1887,7 @@ Begin WebContainer conMemInfo
       AutoCapitalize  =   True
       AutoComplete    =   True
       AutoCorrect     =   True
-      CueText         =   ""
+      CueText         =   "Leave Blank for US"
       Cursor          =   0
       Enabled         =   True
       HasFocusRing    =   True
@@ -3123,6 +3123,17 @@ End
 		    oSQL.AddValues  cboChapterName.Text,  msRegion, frmUpdateInfo.msNewChapterCode
 		  end
 		  
+		  if txtPCountry.Text = "USA" or txtPCountry.Text = "United States" or txtPCountry.Text = "United States of America" or _
+		    txtPCountry.Text = "U.S." or txtPCountry.Text = "U.S.A." or txtPCountry.Text = "U.S."  _
+		    or txtPCountry.Text = "US"  then
+		    txtPCountry.Text = ""
+		  end
+		  
+		  if txtSCountry.Text = "USA" or txtSCountry.Text = "United States" or txtSCountry.Text = "United States of America" or _
+		    txtSCountry.Text = "U.S." or txtSCountry.Text = "U.S.A." or txtSCountry.Text = "U.S."  _
+		    or txtSCountry.Text = "US"  then
+		    txtSCountry.Text = ""
+		  end
 		  
 		  oSQL.AddFields "NamePrefix",                "FirstName", "Middle",  "LastName",   "Birthday",                "Title"
 		  oSQL.AddValues popNamePrefix.Text, txtFirst.Text, txtMiddle.Text, txtLast.Text, ldBDay.SQLDate, txtTitle.Text
