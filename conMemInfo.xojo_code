@@ -2894,6 +2894,8 @@ End
 		  oSQL.AddTable "tblaspechaptercodes"
 		  oSQL.AddFields "ChapterName"
 		  oSQL.AddOrderClause "ChapterName"
+		  oSQL.AddSimpleWhereClause("Inactive", "0")
+		  
 		  lsSQL = oSQL.SQL
 		  
 		  rs = Session.sesAspeDB.SQLSelect(lsSql)
