@@ -2781,7 +2781,7 @@ Begin WebContainer conMemInfo
       _VerticalPercent=   0.0
    End
    Begin WebCheckbox chkTexting
-      Caption         =   "Opt In - I would like to receive membership renewal reminders and society related important announcements via text messages "
+      Caption         =   "I would like to Opt Out of receiving  membership renewal reminders and society related important announcements via text messages "
       Cursor          =   1
       Enabled         =   True
       Height          =   22
@@ -2797,13 +2797,13 @@ Begin WebContainer conMemInfo
       LockTop         =   True
       LockVertical    =   False
       Scope           =   0
-      Style           =   "255913983"
+      Style           =   "1710913587"
       TabOrder        =   8
       Top             =   130
       Value           =   False
       VerticalCenter  =   0
       Visible         =   True
-      Width           =   871
+      Width           =   880
       ZIndex          =   1
       _DeclareLineRendered=   False
       _HorizontalPercent=   0.0
@@ -2832,9 +2832,11 @@ Begin WebContainer conMemInfo
       MinHeight       =   0
       MinWidth        =   0
       Resizable       =   True
+      Result          =   False
       Scope           =   0
       Style           =   "-1"
       TabOrder        =   -1
+      TabPanelIndex   =   0
       Title           =   "Untitled"
       Top             =   20
       Type            =   1
@@ -3088,7 +3090,7 @@ End
 		  txtSCountry.Text = ChkStr(rs.Field("SCountry").StringValue)
 		  txtSPhone.Text = ChkStr(rs.Field("SPhone").StringValue)
 		  
-		  chkTexting.Value = rs.Field("TextingOK").BooleanValue
+		  chkTexting.Value = rs.Field("TextingOptOut").BooleanValue
 		  mdTexting = Nil
 		  
 		  if InStr(0, "Sent To VPM 1, Sent To VPM 2, Back From VPM, Active Member, Renewal", rs.Field("MemStatus").StringValue ) > 0 then
@@ -3248,7 +3250,7 @@ End
 		  oSQL.AddFields "NSPE",        "NFPA",              "SFPE",              "WTO",              "ASME",             "MailInvoice"
 		  oSQL.AddValues chkNSPE.Value, chkNFPA.Value, chkSFPE.Value, chkWTO.Value, chkASME.Value, chkMailInvoice.Value
 		  
-		  oSQL.AddFields "TextingOK"
+		  oSQL.AddFields "TextingOptOut"
 		  oSQL.AddValues chkTexting.value
 		  
 		  if mdTexting <> Nil then
@@ -3590,14 +3592,14 @@ End
 		Sub Action()
 		  If not ValidateAll then return
 		  
-		  if frmUpdateInfo.mbIsMember and txtPhoneCell.text <> "" then
-		    
-		    YNDiag1.YNQuestion("Since you have a Cell Phone, would you like to be reminded when your membership is about to expire?")
-		    
-		    
-		  else
-		    SaveButtonPressed
-		  end
+		  'if frmUpdateInfo.mbIsMember and txtPhoneCell.text <> "" then
+		  '
+		  'YNDiag1.YNQuestion("Since you have a Cell Phone, would you like to be reminded when your membership is about to expire?")
+		  '
+		  '
+		  'else
+		  SaveButtonPressed
+		  'end
 		  
 		  
 		End Sub
