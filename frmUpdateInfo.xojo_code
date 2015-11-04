@@ -202,6 +202,13 @@ End
 
 #tag WindowCode
 	#tag Event
+		Sub Close()
+		  App.Quit
+		  Session.Quit
+		End Sub
+	#tag EndEvent
+
+	#tag Event
 		Sub Shown()
 		  lblVersion.Text = "Build:" + Str(App.NonReleaseVersion)
 		End Sub

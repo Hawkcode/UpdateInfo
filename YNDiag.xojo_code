@@ -46,7 +46,6 @@ Begin WebDialog YNDiag
       Index           =   -2147483648
       Left            =   252
       LockBottom      =   False
-      LockedIDEPosition=   False
       LockedInPosition=   False
       LockHorizontal  =   False
       LockLeft        =   True
@@ -81,7 +80,6 @@ Begin WebDialog YNDiag
       Index           =   -2147483648
       Left            =   140
       LockBottom      =   False
-      LockedIDEPosition=   False
       LockedInPosition=   False
       LockHorizontal  =   False
       LockLeft        =   True
@@ -116,7 +114,6 @@ Begin WebDialog YNDiag
       Index           =   -2147483648
       Left            =   364
       LockBottom      =   False
-      LockedIDEPosition=   False
       LockedInPosition=   False
       LockHorizontal  =   False
       LockLeft        =   True
@@ -166,14 +163,21 @@ Begin WebDialog YNDiag
       Visible         =   True
       Width           =   434
       ZIndex          =   1
+      _DeclareLineRendered=   False
+      _HorizontalPercent=   0.0
+      _IsEmbedded     =   False
+      _Locked         =   False
       _NeedsRendering =   True
+      _OfficialControl=   False
+      _OpenEventFired =   False
+      _VerticalPercent=   0.0
    End
 End
 #tag EndWebPage
 
 #tag WindowCode
 	#tag Method, Flags = &h0
-		Sub YNQuestion(lsPrompt As  String)
+		Sub YNQuestion(lsPrompt As String)
 		  lblPrompt.Text = lsPrompt
 		  Self.Show
 		  
