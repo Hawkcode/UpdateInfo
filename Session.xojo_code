@@ -25,7 +25,10 @@ Inherits WebSession
 
 	#tag Event
 		Sub TimedOut()
+		  
 		  Self.Quit
+		  
+		  ShowURL("Https://aspe.org")
 		End Sub
 	#tag EndEvent
 
