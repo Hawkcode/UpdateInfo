@@ -96,6 +96,7 @@ Begin WebPage frmUpdateInfo
       Style           =   "866787714"
       TabOrder        =   1
       Text            =   "Your account data as ASPE has it:"
+      TextAlign       =   0
       Top             =   14
       VerticalCenter  =   0
       Visible         =   True
@@ -131,6 +132,7 @@ Begin WebPage frmUpdateInfo
       Style           =   "1304282530"
       TabOrder        =   1
       Text            =   "To edit your account press the edit button:"
+      TextAlign       =   0
       Top             =   418
       VerticalCenter  =   0
       Visible         =   True
@@ -150,17 +152,13 @@ Begin WebPage frmUpdateInfo
       CertificatePassword=   ""
       CertificateRejectionFile=   
       ConnectionType  =   2
-      Height          =   32
       Index           =   -2147483648
-      Left            =   80
       LockedInPosition=   False
       Scope           =   0
       Secure          =   False
       SMTPConnectionMode=   0
       Style           =   "-1"
       TabPanelIndex   =   0
-      Top             =   80
-      Width           =   32
    End
    Begin WebLabel lblVersion
       Cursor          =   1
@@ -183,6 +181,7 @@ Begin WebPage frmUpdateInfo
       Style           =   "-1"
       TabOrder        =   2
       Text            =   ""
+      TextAlign       =   0
       Top             =   460
       VerticalCenter  =   0
       Visible         =   True
@@ -444,6 +443,11 @@ End
 		Type="Boolean"
 	#tag EndViewProperty
 	#tag ViewProperty
+		Name="mbIsMember"
+		Group="Behavior"
+		Type="Boolean"
+	#tag EndViewProperty
+	#tag ViewProperty
 		Name="MinHeight"
 		Visible=true
 		Group="Behavior"
@@ -456,6 +460,46 @@ End
 		Group="Behavior"
 		InitialValue="600"
 		Type="Integer"
+	#tag EndViewProperty
+	#tag ViewProperty
+		Name="msCurrentChapter"
+		Group="Behavior"
+		Type="String"
+	#tag EndViewProperty
+	#tag ViewProperty
+		Name="msNewChapterCode"
+		Group="Behavior"
+		Type="String"
+	#tag EndViewProperty
+	#tag ViewProperty
+		Name="msNewPresEmail"
+		Group="Behavior"
+		Type="String"
+	#tag EndViewProperty
+	#tag ViewProperty
+		Name="msNewVPMEmail"
+		Group="Behavior"
+		Type="String"
+	#tag EndViewProperty
+	#tag ViewProperty
+		Name="msPreviousChapter"
+		Group="Behavior"
+		Type="String"
+	#tag EndViewProperty
+	#tag ViewProperty
+		Name="msPreviousChapterCode"
+		Group="Behavior"
+		Type="String"
+	#tag EndViewProperty
+	#tag ViewProperty
+		Name="msPrevPresEmail"
+		Group="Behavior"
+		Type="String"
+	#tag EndViewProperty
+	#tag ViewProperty
+		Name="msPrevVPMEmail"
+		Group="Behavior"
+		Type="String"
 	#tag EndViewProperty
 	#tag ViewProperty
 		Name="Name"
@@ -513,6 +557,12 @@ End
 		Type="Integer"
 	#tag EndViewProperty
 	#tag ViewProperty
+		Name="_DeclareLineRendered"
+		Group="Behavior"
+		InitialValue="False"
+		Type="Boolean"
+	#tag EndViewProperty
+	#tag ViewProperty
 		Name="_HorizontalPercent"
 		Group="Behavior"
 		Type="Double"
@@ -543,6 +593,11 @@ End
 		Name="_OfficialControl"
 		Group="Behavior"
 		InitialValue="False"
+		Type="Boolean"
+	#tag EndViewProperty
+	#tag ViewProperty
+		Name="_OpenEventFired"
+		Group="Behavior"
 		Type="Boolean"
 	#tag EndViewProperty
 	#tag ViewProperty

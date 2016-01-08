@@ -92,6 +92,7 @@ Begin WebContainer conMemInfo
       Style           =   "1951204359"
       TabOrder        =   3
       Text            =   ""
+      TextAlign       =   0
       Top             =   70
       Type            =   0
       VerticalCenter  =   0
@@ -128,6 +129,7 @@ Begin WebContainer conMemInfo
       Style           =   "265449240"
       TabOrder        =   50
       Text            =   "Middle Name:"
+      TextAlign       =   0
       Top             =   70
       VerticalCenter  =   0
       Visible         =   True
@@ -163,6 +165,7 @@ Begin WebContainer conMemInfo
       Style           =   "54593926"
       TabOrder        =   53
       Text            =   "Last Name:"
+      TextAlign       =   0
       Top             =   71
       VerticalCenter  =   0
       Visible         =   True
@@ -204,6 +207,7 @@ Begin WebContainer conMemInfo
       Style           =   "1951204359"
       TabOrder        =   2
       Text            =   ""
+      TextAlign       =   0
       Top             =   36
       Type            =   0
       VerticalCenter  =   0
@@ -240,6 +244,7 @@ Begin WebContainer conMemInfo
       Style           =   "54593926"
       TabOrder        =   62
       Text            =   "Birthday M/D/YYYY:"
+      TextAlign       =   0
       Top             =   104
       VerticalCenter  =   0
       Visible         =   True
@@ -281,6 +286,7 @@ Begin WebContainer conMemInfo
       Style           =   "1951204359"
       TabOrder        =   9
       Text            =   ""
+      TextAlign       =   0
       Top             =   105
       Type            =   0
       VerticalCenter  =   0
@@ -323,6 +329,7 @@ Begin WebContainer conMemInfo
       Style           =   "1951204359"
       TabOrder        =   10
       Text            =   ""
+      TextAlign       =   0
       Top             =   105
       Type            =   0
       VerticalCenter  =   0
@@ -365,6 +372,7 @@ Begin WebContainer conMemInfo
       Style           =   "1951204359"
       TabOrder        =   11
       Text            =   ""
+      TextAlign       =   0
       Top             =   105
       Type            =   0
       VerticalCenter  =   0
@@ -401,6 +409,7 @@ Begin WebContainer conMemInfo
       Style           =   "737352837"
       TabOrder        =   67
       Text            =   "/"
+      TextAlign       =   0
       Top             =   104
       VerticalCenter  =   0
       Visible         =   True
@@ -436,6 +445,7 @@ Begin WebContainer conMemInfo
       Style           =   "737352837"
       TabOrder        =   65
       Text            =   "/"
+      TextAlign       =   0
       Top             =   104
       VerticalCenter  =   0
       Visible         =   True
@@ -471,6 +481,7 @@ Begin WebContainer conMemInfo
       Style           =   "54593926"
       TabOrder        =   52
       Text            =   "Chapter:"
+      TextAlign       =   0
       Top             =   104
       VerticalCenter  =   0
       Visible         =   True
@@ -506,6 +517,7 @@ Begin WebContainer conMemInfo
       Style           =   "265449240"
       TabOrder        =   47
       Text            =   "First Name:"
+      TextAlign       =   0
       Top             =   36
       VerticalCenter  =   0
       Visible         =   True
@@ -579,6 +591,7 @@ Begin WebContainer conMemInfo
       Style           =   "1951204359"
       TabOrder        =   30
       Text            =   ""
+      TextAlign       =   0
       Top             =   270
       Type            =   0
       VerticalCenter  =   0
@@ -615,6 +628,7 @@ Begin WebContainer conMemInfo
       Style           =   "265449240"
       TabOrder        =   45
       Text            =   "Street Address:"
+      TextAlign       =   0
       Top             =   270
       VerticalCenter  =   0
       Visible         =   True
@@ -650,6 +664,7 @@ Begin WebContainer conMemInfo
       Style           =   "265449240"
       TabOrder        =   44
       Text            =   "Primary:"
+      TextAlign       =   0
       Top             =   219
       VerticalCenter  =   0
       Visible         =   True
@@ -691,6 +706,7 @@ Begin WebContainer conMemInfo
       Style           =   "1951204359"
       TabOrder        =   31
       Text            =   ""
+      TextAlign       =   0
       Top             =   297
       Type            =   0
       VerticalCenter  =   0
@@ -727,6 +743,7 @@ Begin WebContainer conMemInfo
       Style           =   "265449240"
       TabOrder        =   46
       Text            =   "City, State Zip:"
+      TextAlign       =   0
       Top             =   297
       VerticalCenter  =   0
       Visible         =   True
@@ -768,6 +785,7 @@ Begin WebContainer conMemInfo
       Style           =   "1951204359"
       TabOrder        =   32
       Text            =   ""
+      TextAlign       =   0
       Top             =   297
       Type            =   0
       VerticalCenter  =   0
@@ -804,6 +822,7 @@ Begin WebContainer conMemInfo
       Style           =   "54593926"
       TabOrder        =   49
       Text            =   "Primary Email:"
+      TextAlign       =   0
       Top             =   196
       VerticalCenter  =   0
       Visible         =   True
@@ -845,6 +864,7 @@ Begin WebContainer conMemInfo
       Style           =   "1951204359"
       TabOrder        =   33
       Text            =   ""
+      TextAlign       =   0
       Top             =   297
       Type            =   0
       VerticalCenter  =   0
@@ -881,6 +901,7 @@ Begin WebContainer conMemInfo
       Style           =   "265449240"
       TabOrder        =   51
       Text            =   "Secondary Email:"
+      TextAlign       =   0
       Top             =   196
       VerticalCenter  =   0
       Visible         =   True
@@ -922,6 +943,7 @@ Begin WebContainer conMemInfo
       Style           =   "1951204359"
       TabOrder        =   27
       Text            =   ""
+      TextAlign       =   0
       Top             =   195
       Type            =   2
       VerticalCenter  =   0
@@ -964,6 +986,7 @@ Begin WebContainer conMemInfo
       Style           =   "1951204359"
       TabOrder        =   28
       Text            =   ""
+      TextAlign       =   0
       Top             =   196
       Type            =   2
       VerticalCenter  =   0
@@ -1006,6 +1029,7 @@ Begin WebContainer conMemInfo
       Style           =   "1951204359"
       TabOrder        =   35
       Text            =   ""
+      TextAlign       =   0
       Top             =   325
       Type            =   0
       VerticalCenter  =   0
@@ -1042,6 +1066,7 @@ Begin WebContainer conMemInfo
       Style           =   "265449240"
       TabOrder        =   55
       Text            =   "Phone:"
+      TextAlign       =   0
       Top             =   325
       VerticalCenter  =   0
       Visible         =   True
@@ -1083,6 +1108,7 @@ Begin WebContainer conMemInfo
       Style           =   "1951204359"
       TabOrder        =   7
       Text            =   ""
+      TextAlign       =   0
       Top             =   104
       Type            =   0
       VerticalCenter  =   0
@@ -1119,6 +1145,7 @@ Begin WebContainer conMemInfo
       Style           =   "265449240"
       TabOrder        =   59
       Text            =   "Cell:"
+      TextAlign       =   0
       Top             =   105
       VerticalCenter  =   0
       Visible         =   True
@@ -1192,6 +1219,7 @@ Begin WebContainer conMemInfo
       Style           =   "1951204359"
       TabOrder        =   37
       Text            =   ""
+      TextAlign       =   0
       Top             =   270
       Type            =   0
       VerticalCenter  =   0
@@ -1228,6 +1256,7 @@ Begin WebContainer conMemInfo
       Style           =   "265449240"
       TabOrder        =   63
       Text            =   "Street Address:"
+      TextAlign       =   0
       Top             =   270
       VerticalCenter  =   0
       Visible         =   True
@@ -1263,6 +1292,7 @@ Begin WebContainer conMemInfo
       Style           =   "265449240"
       TabOrder        =   64
       Text            =   "Secondary:"
+      TextAlign       =   0
       Top             =   219
       VerticalCenter  =   0
       Visible         =   True
@@ -1304,6 +1334,7 @@ Begin WebContainer conMemInfo
       Style           =   "1951204359"
       TabOrder        =   38
       Text            =   ""
+      TextAlign       =   0
       Top             =   297
       Type            =   0
       VerticalCenter  =   0
@@ -1340,6 +1371,7 @@ Begin WebContainer conMemInfo
       Style           =   "265449240"
       TabOrder        =   66
       Text            =   "City, State Zip:"
+      TextAlign       =   0
       Top             =   297
       VerticalCenter  =   0
       Visible         =   True
@@ -1381,6 +1413,7 @@ Begin WebContainer conMemInfo
       Style           =   "1951204359"
       TabOrder        =   39
       Text            =   ""
+      TextAlign       =   0
       Top             =   297
       Type            =   0
       VerticalCenter  =   0
@@ -1423,6 +1456,7 @@ Begin WebContainer conMemInfo
       Style           =   "1951204359"
       TabOrder        =   40
       Text            =   ""
+      TextAlign       =   0
       Top             =   297
       Type            =   0
       VerticalCenter  =   0
@@ -1465,6 +1499,7 @@ Begin WebContainer conMemInfo
       Style           =   "1951204359"
       TabOrder        =   42
       Text            =   ""
+      TextAlign       =   0
       Top             =   325
       Type            =   0
       VerticalCenter  =   0
@@ -1501,6 +1536,7 @@ Begin WebContainer conMemInfo
       Style           =   "265449240"
       TabOrder        =   69
       Text            =   "Phone:"
+      TextAlign       =   0
       Top             =   325
       VerticalCenter  =   0
       Visible         =   True
@@ -1638,6 +1674,7 @@ Begin WebContainer conMemInfo
       Style           =   "54593926"
       TabOrder        =   68
       Text            =   "Organizations:"
+      TextAlign       =   0
       Top             =   154
       VerticalCenter  =   0
       Visible         =   True
@@ -1679,6 +1716,7 @@ Begin WebContainer conMemInfo
       Style           =   "1951204359"
       TabOrder        =   0
       Text            =   ""
+      TextAlign       =   0
       Top             =   36
       Type            =   0
       VerticalCenter  =   0
@@ -1715,6 +1753,7 @@ Begin WebContainer conMemInfo
       Style           =   "265449240"
       TabOrder        =   61
       Text            =   "Title:"
+      TextAlign       =   0
       Top             =   36
       VerticalCenter  =   0
       Visible         =   True
@@ -1756,6 +1795,7 @@ Begin WebContainer conMemInfo
       Style           =   "1951204359"
       TabOrder        =   36
       Text            =   ""
+      TextAlign       =   0
       Top             =   243
       Type            =   0
       VerticalCenter  =   0
@@ -1792,6 +1832,7 @@ Begin WebContainer conMemInfo
       Style           =   "265449240"
       TabOrder        =   57
       Text            =   "Company:"
+      TextAlign       =   0
       Top             =   243
       VerticalCenter  =   0
       Visible         =   True
@@ -1827,6 +1868,7 @@ Begin WebContainer conMemInfo
       Style           =   "265449240"
       TabOrder        =   54
       Text            =   "Country:"
+      TextAlign       =   0
       Top             =   325
       VerticalCenter  =   0
       Visible         =   True
@@ -1868,6 +1910,7 @@ Begin WebContainer conMemInfo
       Style           =   "1951204359"
       TabOrder        =   41
       Text            =   ""
+      TextAlign       =   0
       Top             =   325
       Type            =   0
       VerticalCenter  =   0
@@ -1910,6 +1953,7 @@ Begin WebContainer conMemInfo
       Style           =   "1951204359"
       TabOrder        =   34
       Text            =   ""
+      TextAlign       =   0
       Top             =   325
       Type            =   0
       VerticalCenter  =   0
@@ -1946,6 +1990,7 @@ Begin WebContainer conMemInfo
       Style           =   "265449240"
       TabOrder        =   43
       Text            =   "Country:"
+      TextAlign       =   0
       Top             =   325
       VerticalCenter  =   0
       Visible         =   True
@@ -2049,6 +2094,7 @@ Begin WebContainer conMemInfo
       Style           =   "265449240"
       TabOrder        =   56
       Text            =   "Company:"
+      TextAlign       =   0
       Top             =   243
       VerticalCenter  =   0
       Visible         =   True
@@ -2090,6 +2136,7 @@ Begin WebContainer conMemInfo
       Style           =   "1951204359"
       TabOrder        =   29
       Text            =   ""
+      TextAlign       =   0
       Top             =   243
       Type            =   0
       VerticalCenter  =   0
@@ -2126,6 +2173,7 @@ Begin WebContainer conMemInfo
       Style           =   "265449240"
       TabOrder        =   48
       Text            =   "Name Prefix:"
+      TextAlign       =   0
       Top             =   36
       VerticalCenter  =   0
       Visible         =   True
@@ -2161,6 +2209,7 @@ Begin WebContainer conMemInfo
       Style           =   "265449240"
       TabOrder        =   60
       Text            =   "Suffix:"
+      TextAlign       =   0
       Top             =   71
       VerticalCenter  =   0
       Visible         =   True
@@ -2202,6 +2251,7 @@ Begin WebContainer conMemInfo
       Style           =   "1951204359"
       TabOrder        =   5
       Text            =   ""
+      TextAlign       =   0
       Top             =   70
       Type            =   0
       VerticalCenter  =   0
@@ -2482,6 +2532,7 @@ Begin WebContainer conMemInfo
       Style           =   "1951204359"
       TabOrder        =   6
       Text            =   ""
+      TextAlign       =   0
       Top             =   70
       Type            =   0
       VerticalCenter  =   0
@@ -2518,6 +2569,7 @@ Begin WebContainer conMemInfo
       Style           =   "265449240"
       TabOrder        =   58
       Text            =   "Badge:"
+      TextAlign       =   0
       Top             =   70
       VerticalCenter  =   0
       Visible         =   True
@@ -2559,6 +2611,7 @@ Begin WebContainer conMemInfo
       Style           =   "1951204359"
       TabOrder        =   4
       Text            =   ""
+      TextAlign       =   0
       Top             =   71
       Type            =   0
       VerticalCenter  =   0
@@ -2766,6 +2819,7 @@ Begin WebContainer conMemInfo
       Style           =   "584613819"
       TabOrder        =   72
       Text            =   "Press edit to change your information:"
+      TextAlign       =   0
       Top             =   0
       VerticalCenter  =   0
       Visible         =   True
@@ -2817,11 +2871,9 @@ Begin WebContainer conMemInfo
    Begin YNDiag YNDiag1
       Cursor          =   0
       Enabled         =   True
-      Height          =   163
       HelpTag         =   ""
       HorizontalCenter=   0
       Index           =   -2147483648
-      Left            =   20
       LockBottom      =   False
       LockedInPosition=   False
       LockHorizontal  =   False
@@ -2838,11 +2890,8 @@ Begin WebContainer conMemInfo
       TabOrder        =   -1
       TabPanelIndex   =   0
       Title           =   "Untitled"
-      Top             =   20
       Type            =   1
       VerticalCenter  =   0
-      Visible         =   True
-      Width           =   474
       ZIndex          =   1
       _DeclareLineRendered=   False
       _HorizontalPercent=   0.0

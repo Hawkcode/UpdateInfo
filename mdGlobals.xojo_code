@@ -298,48 +298,73 @@ Protected Module mdGlobals
 		  Dim rsD as RecordSet
 		  Dim lbFound as Boolean
 		  
-		  
-		  lbFound = False
-		  if lnUID <> 0 then
-		    lsSql = "SELECT d_profile_value.fid, d_profile_value.value, d_profile_value.uid FROM d_profile_value "
-		    lsSql = lsSql + "WHERE d_profile_value.fid = 17 and d_profile_value.uid = " + Str(lnUID)
-		    
-		    'MsgBox(lssql)
-		    'if not ConnectWS then
-		    '
-		    'Return 0
-		    'end
-		    '
-		    rsD = Session.sesWebDB.SQLSelect(lsSql)
-		    if not Session.sesWebDB.CheckDBError then
-		      if rsD.RecordCount  > 0 then
-		        Return rsD.Field("value").IntegerValue
+		  Try
+		    lbFound = False
+		    if lnUID <> 0 then
+		      lsSql = "SELECT d_profile_value.fid, d_profile_value.value, d_profile_value.uid FROM d_profile_value "
+		      lsSql = lsSql + "WHERE d_profile_value.fid = 17 and d_profile_value.uid = " + Str(lnUID)
+		      
+		      'MsgBox(lssql)
+		      'if not ConnectWS then
+		      '
+		      'Return 0
+		      'end
+		      '
+		      rsD = Session.sesWebDB.SQLSelect(lsSql)
+		      if  not IsNull(rsD) then
+		        if not Session.sesWebDB.CheckDBError then
+		          if rsD.RecordCount  > 0 then
+		            Return rsD.Field("value").IntegerValue
+		          end
+		        end
 		      end
 		    end
-		  end
+		  Catch e As RunTimeException
+		    app.WriteLog("Using UID an Exception of type: " + e.Type + " Message: " + e.Message )
+		    Return 0
+		  End Try
+		  
+		  
+		  
+		  
 		  
 		  lsSql = "Select mail from d_users where uid = " + Str(lnUID)
 		  
 		  rsD = Session.sesWebDB.SQLSelect(lsSql)
 		  if not Session.sesWebDB.CheckDBError then
-		    if rsD.RecordCount  > 0 then
-		      lsEmail = rsD.Field("value").StringValue
-		    else
-		      Return 0
-		    end
-		    
-		    lsSql = "Select PersonID from tblPeople where Email = '" + lsEmail + "' "
-		    rsD = Session.sesAspeDB.SQLSelect(lsSql)
-		    if not Session.sesAspeDB.CheckDBError then
+		    Try
 		      if rsD.RecordCount  > 0 then
-		        Return rsD.Field("PersonID").IntegerValue
+		        lsEmail = rsD.Field("value").StringValue
 		      else
 		        Return 0
 		      end
-		    end
+		      
+		      lsSql = "Select PersonID from tblPeople where Email = '" + lsEmail + "' "
+		      rsD = Session.sesAspeDB.SQLSelect(lsSql)
+		    Catch e As RunTimeException
+		      app.WriteLog("Using Email an Exception of type: " + e.Type + " Message: " + e.Message )
+		      Return 0
+		      
+		    end try
+		    Try
+		      
+		      if  not IsNull(rsD) then
+		        if not Session.sesAspeDB.CheckDBError then
+		          if rsD.RecordCount  > 0 then
+		            Return rsD.Field("PersonID").IntegerValue
+		          else
+		            Return 0
+		          end
+		        end
+		        
+		      end
+		    Catch e As RunTimeException
+		      app.WriteLog("Returning PID an Exception of type: " + e.Type + " Message: " + e.Message )
+		      Return 0
+		      
+		    end try
+		    
 		  end
-		  
-		  
 		  
 		  return 0
 		  
@@ -756,14 +781,14 @@ Protected Module mdGlobals
 	#tag EndMethod
 
 	#tag Method, Flags = &h0
-		Function Type(extends e as RuntimeException) As String
-		  dim T as Introspection.TypeInfo = Introspection.GetType(e)
-		  if T <> nil then
-		    return T.FullName
-		  else
+		Function Type(extends e As RuntimeException) As String
+		  Dim t As Introspection.TypeInfo = Introspection.GetType(e)
+		  If t <> Nil Then
+		    Return t.FullName
+		  Else
 		    //this should never happen...
-		    return ""
-		  end if
+		    Return ""
+		  End If
 		End Function
 	#tag EndMethod
 
