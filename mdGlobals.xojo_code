@@ -342,7 +342,8 @@ Protected Module mdGlobals
 		      lsSql = "Select PersonID from tblPeople where Email = '" + lsEmail + "' "
 		      rsD = Session.sesAspeDB.SQLSelect(lsSql)
 		    Catch e As RunTimeException
-		      app.WriteLog("Using Email an Exception of type: " + e.Type + " Message: " + e.Message )
+		      app.WriteLog("Using Email an Exception of type: " + e.Type + " Message: " + e.Message + EndOfLine + EndOfLine + _
+		      "SQL: >>" + lsSql + "<<" )
 		      Return 0
 		      
 		    end try
