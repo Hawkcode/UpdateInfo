@@ -293,10 +293,17 @@ Protected Module mdGlobals
 	#tag EndMethod
 
 	#tag Method, Flags = &h0
-		Function GetPID(lnUID as Integer) As Integer
+		Function GetPID(lnUID as Integer = 0) As Integer
 		  DIM lsSql, lsEmail AS STRING
 		  Dim rsD as RecordSet
 		  Dim lbFound as Boolean
+		  
+		  if not Session.Available then
+		    app.WriteLog("Session Not Available: ")
+		  else
+		    app.WriteLog("Session is Available: ")
+		  end
+		  
 		  
 		  Try
 		    lbFound = False
@@ -324,9 +331,7 @@ Protected Module mdGlobals
 		    Return 0
 		  End Try
 		  
-		  
-		  
-		  
+		  if lnUID = 0 then Return 0
 		  
 		  lsSql = "Select mail from d_users where uid = " + Str(lnUID)
 		  
@@ -334,6 +339,7 @@ Protected Module mdGlobals
 		  if not Session.sesWebDB.CheckDBError then
 		    Try
 		      if rsD.RecordCount  > 0 then
+		        
 		        lsEmail = rsD.Field("value").StringValue
 		      else
 		        Return 0
@@ -342,9 +348,13 @@ Protected Module mdGlobals
 		      lsSql = "Select PersonID from tblPeople where Email = '" + lsEmail + "' "
 		      rsD = Session.sesAspeDB.SQLSelect(lsSql)
 		    Catch e As RunTimeException
-		      app.WriteLog("Using Email an Exception of type: " + e.Type + " Message: " + e.Message + EndOfLine + EndOfLine + _
-		      "SQL: >>" + lsSql + "<<" )
-		      Return 0
+		      app.WriteLog("Using Email an Exception of type: " + e.Type + EndOfLine + _
+		      "                           Reason: " + e.Reason + EndOfLine + _
+		      "                     Error Number: " + e.ErrorNumber.ToText + EndOfLine + _
+		      "                          Message: " + e.Message + EndOfLine +  _
+		      "SQL: >>" + lsSql + "<<" + EndOfLine + EndOfLine )
+		      Return 0           '"                            Stack: " + e.Stack() + _
+		      
 		      
 		    end try
 		    Try
