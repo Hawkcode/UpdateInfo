@@ -119,7 +119,7 @@ Begin WebPage frmUpdateInfo
       HelpTag         =   ""
       HorizontalCenter=   0
       Index           =   -2147483648
-      Left            =   364
+      Left            =   366
       LockBottom      =   False
       LockedInPosition=   False
       LockHorizontal  =   False
@@ -133,7 +133,7 @@ Begin WebPage frmUpdateInfo
       TabOrder        =   1
       Text            =   "To edit your account press the edit button:"
       TextAlign       =   0
-      Top             =   418
+      Top             =   416
       VerticalCenter  =   0
       Visible         =   True
       Width           =   303
@@ -465,41 +465,49 @@ End
 		Name="msCurrentChapter"
 		Group="Behavior"
 		Type="String"
+		EditorType="MultiLineEditor"
 	#tag EndViewProperty
 	#tag ViewProperty
 		Name="msNewChapterCode"
 		Group="Behavior"
 		Type="String"
+		EditorType="MultiLineEditor"
 	#tag EndViewProperty
 	#tag ViewProperty
 		Name="msNewPresEmail"
 		Group="Behavior"
 		Type="String"
+		EditorType="MultiLineEditor"
 	#tag EndViewProperty
 	#tag ViewProperty
 		Name="msNewVPMEmail"
 		Group="Behavior"
 		Type="String"
+		EditorType="MultiLineEditor"
 	#tag EndViewProperty
 	#tag ViewProperty
 		Name="msPreviousChapter"
 		Group="Behavior"
 		Type="String"
+		EditorType="MultiLineEditor"
 	#tag EndViewProperty
 	#tag ViewProperty
 		Name="msPreviousChapterCode"
 		Group="Behavior"
 		Type="String"
+		EditorType="MultiLineEditor"
 	#tag EndViewProperty
 	#tag ViewProperty
 		Name="msPrevPresEmail"
 		Group="Behavior"
 		Type="String"
+		EditorType="MultiLineEditor"
 	#tag EndViewProperty
 	#tag ViewProperty
 		Name="msPrevVPMEmail"
 		Group="Behavior"
 		Type="String"
+		EditorType="MultiLineEditor"
 	#tag EndViewProperty
 	#tag ViewProperty
 		Name="Name"

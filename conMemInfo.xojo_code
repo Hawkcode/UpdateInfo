@@ -2670,7 +2670,7 @@ Begin WebContainer conMemInfo
       HelpTag         =   ""
       HorizontalCenter=   0
       Index           =   -2147483648
-      Left            =   547
+      Left            =   153
       LockBottom      =   False
       LockedInPosition=   False
       LockHorizontal  =   False
@@ -3622,6 +3622,8 @@ End
 	#tag Event
 		Sub Action()
 		  If me.Caption = "Edit" then
+		    Session.ConfirmMessage = "If you leave this page, you will loose all your data. Do not use the Browser's Back Button"
+		    
 		    SetReadOnly(Self, True)
 		    me.Caption = "Cancel"
 		    btnSave.Enabled = True
@@ -3647,6 +3649,8 @@ End
 		  '
 		  '
 		  'else
+		  Session.ConfirmMessage = ""
+		  
 		  SaveButtonPressed
 		  'end
 		  
