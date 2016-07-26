@@ -298,11 +298,11 @@ Protected Module mdGlobals
 		  Dim rsD as RecordSet
 		  Dim lbFound as Boolean
 		  
-		  if not Session.Available then
-		    app.WriteLog("Session Not Available: ")
-		  else
-		    app.WriteLog("Session is Available: ")
-		  end
+		  'if not Session.Available then
+		  'app.WriteLog("Session Not Available: ")
+		  'else
+		  'app.WriteLog("Session is Available: ")
+		  'end
 		  
 		  
 		  Try
@@ -330,12 +330,21 @@ Protected Module mdGlobals
 		    app.WriteLog("Using UID an Exception of type: " + e.Type + " Message: " + e.Message )
 		    Return 0
 		  End Try
+		  Try
+		    if lnUID = 0 then Return 0
+		    
+		    lsSql = "Select mail from d_users where uid = " + Str(lnUID)
+		    
+		    rsD = Session.sesWebDB.SQLSelect(lsSql)
+		  Catch e As RunTimeException
+		    app.WriteLog("Using Email an Exception of type: " + e.Type + EndOfLine + _
+		    "                           Reason: " + e.Reason + EndOfLine + _
+		    "                     Error Number: " + e.ErrorNumber.ToText + EndOfLine + _
+		    "                          Message: " + e.Message + EndOfLine +  _
+		    "SQL: >>" + lsSql + "<<" + EndOfLine + EndOfLine )
+		    Return 0           '"                            Stack: " + e.Stack() + _
+		  end try
 		  
-		  if lnUID = 0 then Return 0
-		  
-		  lsSql = "Select mail from d_users where uid = " + Str(lnUID)
-		  
-		  rsD = Session.sesWebDB.SQLSelect(lsSql)
 		  if not Session.sesWebDB.CheckDBError then
 		    Try
 		      if rsD.RecordCount  > 0 then
