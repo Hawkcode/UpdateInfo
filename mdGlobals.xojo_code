@@ -297,6 +297,7 @@ Protected Module mdGlobals
 		  DIM lsSql, lsEmail AS STRING
 		  Dim rsD as RecordSet
 		  Dim lbFound as Boolean
+		  Dim ls As String
 		  
 		  'if not Session.Available then
 		  'app.WriteLog("Session Not Available: ")
@@ -326,8 +327,14 @@ Protected Module mdGlobals
 		        end
 		      end
 		    end
-		  Catch e As RunTimeException
-		    app.WriteLog("Using UID an Exception of type: " + e.Type + " Message: " + e.Message )
+		  Catch error As RunTimeException
+		    ls = "Runtime Exception: 122801 " + Error.Type + EndOfLine + _
+		    "                           Reason: " + error.Reason + EndOfLine + _
+		    "                     Error Number: " + error.ErrorNumber.ToText + EndOfLine + _
+		    "                          Message: " + error.Message + EndOfLine + _
+		    "                            Stack: " + Join(error.Stack())
+		    App.WriteLog(ls)
+		    
 		    Return 0
 		  End Try
 		  Try
@@ -336,12 +343,16 @@ Protected Module mdGlobals
 		    lsSql = "Select mail from d_users where uid = " + Str(lnUID)
 		    
 		    rsD = Session.sesWebDB.SQLSelect(lsSql)
-		  Catch e As RunTimeException
-		    app.WriteLog("Using Email an Exception of type: " + e.Type + EndOfLine + _
-		    "                           Reason: " + e.Reason + EndOfLine + _
-		    "                     Error Number: " + e.ErrorNumber.ToText + EndOfLine + _
-		    "                          Message: " + e.Message + EndOfLine +  _
-		    "SQL: >>" + lsSql + "<<" + EndOfLine + EndOfLine )
+		  Catch Error As RunTimeException
+		    ls = "Runtime Exception: 122802 " + Error.Type + EndOfLine + _
+		    "                           Reason: " + error.Reason + EndOfLine + _
+		    "                     Error Number: " + error.ErrorNumber.ToText + EndOfLine + _
+		    "                          Message: " + error.Message + EndOfLine + _
+		    "                            Stack: " + Join(error.Stack()) + _
+		    "SQL: >>" + lsSql + "<<" + EndOfLine + EndOfLine 
+		    
+		    App.WriteLog(ls)
+		    
 		    Return 0           '"                            Stack: " + e.Stack() + _
 		  end try
 		  
@@ -349,19 +360,24 @@ Protected Module mdGlobals
 		    Try
 		      if rsD.RecordCount  > 0 then
 		        
-		        lsEmail = rsD.Field("value").StringValue
+		        'lsEmail = rsD.Field("value").StringValue
+		        lsEmail = rsD.Field("mail").StringValue ' Changed 7/4/16 9:50
 		      else
 		        Return 0
 		      end
 		      
 		      lsSql = "Select PersonID from tblPeople where Email = '" + lsEmail + "' "
 		      rsD = Session.sesAspeDB.SQLSelect(lsSql)
-		    Catch e As RunTimeException
-		      app.WriteLog("Using Email an Exception of type: " + e.Type + EndOfLine + _
-		      "                           Reason: " + e.Reason + EndOfLine + _
-		      "                     Error Number: " + e.ErrorNumber.ToText + EndOfLine + _
-		      "                          Message: " + e.Message + EndOfLine +  _
-		      "SQL: >>" + lsSql + "<<" + EndOfLine + EndOfLine )
+		    Catch Error As RunTimeException
+		      ls = "Runtime Exception: 122803" + Error.Type + EndOfLine + _
+		      "                           Reason: " + error.Reason + EndOfLine + _
+		      "                     Error Number: " + error.ErrorNumber.ToText + EndOfLine + _
+		      "                          Message: " + error.Message + EndOfLine + _
+		      "                            Stack: " + Join(error.Stack()) + _
+		      "SQL: >>" + lsSql + "<<" + EndOfLine + EndOfLine 
+		      
+		      App.WriteLog(ls)
+		      
 		      Return 0           '"                            Stack: " + e.Stack() + _
 		      
 		      
@@ -378,8 +394,15 @@ Protected Module mdGlobals
 		        end
 		        
 		      end
-		    Catch e As RunTimeException
-		      app.WriteLog("Returning PID an Exception of type: " + e.Type + " Message: " + e.Message )
+		    Catch Error As RunTimeException
+		      ls = "Runtime Exception: 122804" + Error.Type + EndOfLine + _
+		      "                           Reason: " + error.Reason + EndOfLine + _
+		      "                     Error Number: " + error.ErrorNumber.ToText + EndOfLine + _
+		      "                          Message: " + error.Message + EndOfLine + _
+		      "                            Stack: " + Join(error.Stack()) + _
+		      "SQL: >>" + lsSql + "<<" + EndOfLine + EndOfLine 
+		      
+		      App.WriteLog(ls)
 		      Return 0
 		      
 		    end try

@@ -11,6 +11,21 @@ Inherits WebApplication
 		End Sub
 	#tag EndEvent
 
+	#tag Event
+		Function UnhandledException(Error As RuntimeException) As Boolean
+		  dim ls as String
+		  
+		  ls = "Runtime Exception: " + Error.Type + EndOfLine + _
+		  "                           Reason: " + error.Reason + EndOfLine + _
+		  "                     Error Number: " + error.ErrorNumber.ToText + EndOfLine + _
+		  "                          Message: " + error.Message + EndOfLine + _
+		  "                            Stack: " + Join(error.Stack())
+		  WriteLog(ls)
+		  
+		  Return False
+		End Function
+	#tag EndEvent
+
 
 	#tag Method, Flags = &h0
 		Sub WriteLog(lsText as String)
