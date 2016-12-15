@@ -293,53 +293,121 @@ Protected Module mdGlobals
 	#tag EndMethod
 
 	#tag Method, Flags = &h0
-		Function GetPID(lnUID as Integer) As Integer
+		Function GetPID(lnUID as Integer = 0) As Integer
 		  DIM lsSql, lsEmail AS STRING
 		  Dim rsD as RecordSet
 		  Dim lbFound as Boolean
+		  Dim ls As String
+		  
+		  'if not Session.Available then
+		  'app.WriteLog("Session Not Available: ")
+		  'else
+		  'app.WriteLog("Session is Available: ")
+		  'end
 		  
 		  
-		  lbFound = False
-		  if lnUID <> 0 then
-		    lsSql = "SELECT d_profile_value.fid, d_profile_value.value, d_profile_value.uid FROM d_profile_value "
-		    lsSql = lsSql + "WHERE d_profile_value.fid = 17 and d_profile_value.uid = " + Str(lnUID)
-		    
-		    'MsgBox(lssql)
-		    'if not ConnectWS then
-		    '
-		    'Return 0
-		    'end
-		    '
-		    rsD = Session.sesWebDB.SQLSelect(lsSql)
-		    if not Session.sesWebDB.CheckDBError then
-		      if rsD.RecordCount  > 0 then
-		        Return rsD.Field("value").IntegerValue
+		  Try
+		    lbFound = False
+		    if lnUID <> 0 then
+		      lsSql = "SELECT d_profile_value.fid, d_profile_value.value, d_profile_value.uid FROM d_profile_value "
+		      lsSql = lsSql + "WHERE d_profile_value.fid = 17 and d_profile_value.uid = " + Str(lnUID)
+		      
+		      'MsgBox(lssql)
+		      'if not ConnectWS then
+		      '
+		      'Return 0
+		      'end
+		      '
+		      rsD = Session.sesWebDB.SQLSelect(lsSql)
+		      if  not IsNull(rsD) then
+		        if not Session.sesWebDB.CheckDBError then
+		          if rsD.RecordCount  > 0 then
+		            Return rsD.Field("value").IntegerValue
+		          end
+		        end
 		      end
 		    end
-		  end
-		  
-		  lsSql = "Select mail from d_users where uid = " + Str(lnUID)
-		  
-		  rsD = Session.sesWebDB.SQLSelect(lsSql)
-		  if not Session.sesWebDB.CheckDBError then
-		    if rsD.RecordCount  > 0 then
-		      lsEmail = rsD.Field("value").StringValue
-		    else
-		      Return 0
-		    end
+		  Catch error As RunTimeException
+		    ls = "Runtime Exception: 122801 " + Error.Type + EndOfLine + _
+		    "                           Reason: " + error.Reason + EndOfLine + _
+		    "                     Error Number: " + error.ErrorNumber.ToText + EndOfLine + _
+		    "                          Message: " + error.Message + EndOfLine + _
+		    "                            Stack: " + Join(error.Stack())
+		    App.WriteLog(ls)
 		    
-		    lsSql = "Select PersonID from tblPeople where Email = '" + lsEmail + "' "
-		    rsD = Session.sesAspeDB.SQLSelect(lsSql)
-		    if not Session.sesAspeDB.CheckDBError then
+		    Return 0
+		  End Try
+		  Try
+		    if lnUID = 0 then Return 0
+		    
+		    lsSql = "Select mail from d_users where uid = " + Str(lnUID)
+		    
+		    rsD = Session.sesWebDB.SQLSelect(lsSql)
+		  Catch Error As RunTimeException
+		    ls = "Runtime Exception: 122802 " + Error.Type + EndOfLine + _
+		    "                           Reason: " + error.Reason + EndOfLine + _
+		    "                     Error Number: " + error.ErrorNumber.ToText + EndOfLine + _
+		    "                          Message: " + error.Message + EndOfLine + _
+		    "                            Stack: " + Join(error.Stack()) + _
+		    "SQL: >>" + lsSql + "<<" + EndOfLine + EndOfLine 
+		    
+		    App.WriteLog(ls)
+		    
+		    Return 0           '"                            Stack: " + e.Stack() + _
+		  end try
+		  
+		  if not Session.sesWebDB.CheckDBError then
+		    Try
 		      if rsD.RecordCount  > 0 then
-		        Return rsD.Field("PersonID").IntegerValue
+		        
+		        'lsEmail = rsD.Field("value").StringValue
+		        lsEmail = rsD.Field("mail").StringValue ' Changed 7/4/16 9:50
 		      else
 		        Return 0
 		      end
-		    end
+		      
+		      lsSql = "Select PersonID from tblPeople where Email = '" + lsEmail + "' "
+		      rsD = Session.sesAspeDB.SQLSelect(lsSql)
+		    Catch Error As RunTimeException
+		      ls = "Runtime Exception: 122803" + Error.Type + EndOfLine + _
+		      "                           Reason: " + error.Reason + EndOfLine + _
+		      "                     Error Number: " + error.ErrorNumber.ToText + EndOfLine + _
+		      "                          Message: " + error.Message + EndOfLine + _
+		      "                            Stack: " + Join(error.Stack()) + _
+		      "SQL: >>" + lsSql + "<<" + EndOfLine + EndOfLine 
+		      
+		      App.WriteLog(ls)
+		      
+		      Return 0           '"                            Stack: " + e.Stack() + _
+		      
+		      
+		    end try
+		    Try
+		      
+		      if  not IsNull(rsD) then
+		        if not Session.sesAspeDB.CheckDBError then
+		          if rsD.RecordCount  > 0 then
+		            Return rsD.Field("PersonID").IntegerValue
+		          else
+		            Return 0
+		          end
+		        end
+		        
+		      end
+		    Catch Error As RunTimeException
+		      ls = "Runtime Exception: 122804" + Error.Type + EndOfLine + _
+		      "                           Reason: " + error.Reason + EndOfLine + _
+		      "                     Error Number: " + error.ErrorNumber.ToText + EndOfLine + _
+		      "                          Message: " + error.Message + EndOfLine + _
+		      "                            Stack: " + Join(error.Stack()) + _
+		      "SQL: >>" + lsSql + "<<" + EndOfLine + EndOfLine 
+		      
+		      App.WriteLog(ls)
+		      Return 0
+		      
+		    end try
+		    
 		  end
-		  
-		  
 		  
 		  return 0
 		  
@@ -756,14 +824,14 @@ Protected Module mdGlobals
 	#tag EndMethod
 
 	#tag Method, Flags = &h0
-		Function Type(extends e as RuntimeException) As String
-		  dim T as Introspection.TypeInfo = Introspection.GetType(e)
-		  if T <> nil then
-		    return T.FullName
-		  else
+		Function Type(extends e As RuntimeException) As String
+		  Dim t As Introspection.TypeInfo = Introspection.GetType(e)
+		  If t <> Nil Then
+		    Return t.FullName
+		  Else
 		    //this should never happen...
-		    return ""
-		  end if
+		    Return ""
+		  End If
 		End Function
 	#tag EndMethod
 

@@ -92,6 +92,7 @@ Begin WebContainer conMemInfo
       Style           =   "1951204359"
       TabOrder        =   3
       Text            =   ""
+      TextAlign       =   0
       Top             =   70
       Type            =   0
       VerticalCenter  =   0
@@ -126,8 +127,9 @@ Begin WebContainer conMemInfo
       Multiline       =   False
       Scope           =   0
       Style           =   "265449240"
-      TabOrder        =   49
+      TabOrder        =   50
       Text            =   "Middle Name:"
+      TextAlign       =   0
       Top             =   70
       VerticalCenter  =   0
       Visible         =   True
@@ -161,8 +163,9 @@ Begin WebContainer conMemInfo
       Multiline       =   False
       Scope           =   0
       Style           =   "54593926"
-      TabOrder        =   52
+      TabOrder        =   53
       Text            =   "Last Name:"
+      TextAlign       =   0
       Top             =   71
       VerticalCenter  =   0
       Visible         =   True
@@ -204,6 +207,7 @@ Begin WebContainer conMemInfo
       Style           =   "1951204359"
       TabOrder        =   2
       Text            =   ""
+      TextAlign       =   0
       Top             =   36
       Type            =   0
       VerticalCenter  =   0
@@ -227,7 +231,7 @@ Begin WebContainer conMemInfo
       HelpTag         =   ""
       HorizontalCenter=   0
       Index           =   -2147483648
-      Left            =   247
+      Left            =   254
       LockBottom      =   False
       LockedInPosition=   False
       LockHorizontal  =   False
@@ -237,13 +241,14 @@ Begin WebContainer conMemInfo
       LockVertical    =   False
       Multiline       =   False
       Scope           =   0
-      Style           =   "0"
-      TabOrder        =   61
+      Style           =   "54593926"
+      TabOrder        =   62
       Text            =   "Birthday M/D/YYYY:"
-      Top             =   105
+      TextAlign       =   0
+      Top             =   104
       VerticalCenter  =   0
       Visible         =   True
-      Width           =   130
+      Width           =   133
       ZIndex          =   1
       _DeclareLineRendered=   False
       _HorizontalPercent=   0.0
@@ -279,8 +284,9 @@ Begin WebContainer conMemInfo
       ReadOnly        =   False
       Scope           =   0
       Style           =   "1951204359"
-      TabOrder        =   8
+      TabOrder        =   9
       Text            =   ""
+      TextAlign       =   0
       Top             =   105
       Type            =   0
       VerticalCenter  =   0
@@ -321,8 +327,9 @@ Begin WebContainer conMemInfo
       ReadOnly        =   False
       Scope           =   0
       Style           =   "1951204359"
-      TabOrder        =   9
+      TabOrder        =   10
       Text            =   ""
+      TextAlign       =   0
       Top             =   105
       Type            =   0
       VerticalCenter  =   0
@@ -363,8 +370,9 @@ Begin WebContainer conMemInfo
       ReadOnly        =   False
       Scope           =   0
       Style           =   "1951204359"
-      TabOrder        =   10
+      TabOrder        =   11
       Text            =   ""
+      TextAlign       =   0
       Top             =   105
       Type            =   0
       VerticalCenter  =   0
@@ -399,8 +407,9 @@ Begin WebContainer conMemInfo
       Multiline       =   False
       Scope           =   0
       Style           =   "737352837"
-      TabOrder        =   66
+      TabOrder        =   67
       Text            =   "/"
+      TextAlign       =   0
       Top             =   104
       VerticalCenter  =   0
       Visible         =   True
@@ -434,8 +443,9 @@ Begin WebContainer conMemInfo
       Multiline       =   False
       Scope           =   0
       Style           =   "737352837"
-      TabOrder        =   64
+      TabOrder        =   65
       Text            =   "/"
+      TextAlign       =   0
       Top             =   104
       VerticalCenter  =   0
       Visible         =   True
@@ -469,8 +479,9 @@ Begin WebContainer conMemInfo
       Multiline       =   False
       Scope           =   0
       Style           =   "54593926"
-      TabOrder        =   51
+      TabOrder        =   52
       Text            =   "Chapter:"
+      TextAlign       =   0
       Top             =   104
       VerticalCenter  =   0
       Visible         =   True
@@ -504,8 +515,9 @@ Begin WebContainer conMemInfo
       Multiline       =   False
       Scope           =   0
       Style           =   "265449240"
-      TabOrder        =   46
+      TabOrder        =   47
       Text            =   "First Name:"
+      TextAlign       =   0
       Top             =   36
       VerticalCenter  =   0
       Visible         =   True
@@ -577,8 +589,9 @@ Begin WebContainer conMemInfo
       ReadOnly        =   False
       Scope           =   0
       Style           =   "1951204359"
-      TabOrder        =   29
+      TabOrder        =   30
       Text            =   ""
+      TextAlign       =   0
       Top             =   270
       Type            =   0
       VerticalCenter  =   0
@@ -613,8 +626,9 @@ Begin WebContainer conMemInfo
       Multiline       =   False
       Scope           =   0
       Style           =   "265449240"
-      TabOrder        =   44
+      TabOrder        =   45
       Text            =   "Street Address:"
+      TextAlign       =   0
       Top             =   270
       VerticalCenter  =   0
       Visible         =   True
@@ -648,8 +662,9 @@ Begin WebContainer conMemInfo
       Multiline       =   False
       Scope           =   0
       Style           =   "265449240"
-      TabOrder        =   43
+      TabOrder        =   44
       Text            =   "Primary:"
+      TextAlign       =   0
       Top             =   219
       VerticalCenter  =   0
       Visible         =   True
@@ -689,8 +704,9 @@ Begin WebContainer conMemInfo
       ReadOnly        =   False
       Scope           =   0
       Style           =   "1951204359"
-      TabOrder        =   30
+      TabOrder        =   31
       Text            =   ""
+      TextAlign       =   0
       Top             =   297
       Type            =   0
       VerticalCenter  =   0
@@ -725,8 +741,9 @@ Begin WebContainer conMemInfo
       Multiline       =   False
       Scope           =   0
       Style           =   "265449240"
-      TabOrder        =   45
+      TabOrder        =   46
       Text            =   "City, State Zip:"
+      TextAlign       =   0
       Top             =   297
       VerticalCenter  =   0
       Visible         =   True
@@ -766,8 +783,9 @@ Begin WebContainer conMemInfo
       ReadOnly        =   False
       Scope           =   0
       Style           =   "1951204359"
-      TabOrder        =   31
+      TabOrder        =   32
       Text            =   ""
+      TextAlign       =   0
       Top             =   297
       Type            =   0
       VerticalCenter  =   0
@@ -802,8 +820,9 @@ Begin WebContainer conMemInfo
       Multiline       =   False
       Scope           =   0
       Style           =   "54593926"
-      TabOrder        =   48
+      TabOrder        =   49
       Text            =   "Primary Email:"
+      TextAlign       =   0
       Top             =   196
       VerticalCenter  =   0
       Visible         =   True
@@ -843,8 +862,9 @@ Begin WebContainer conMemInfo
       ReadOnly        =   False
       Scope           =   0
       Style           =   "1951204359"
-      TabOrder        =   32
+      TabOrder        =   33
       Text            =   ""
+      TextAlign       =   0
       Top             =   297
       Type            =   0
       VerticalCenter  =   0
@@ -879,8 +899,9 @@ Begin WebContainer conMemInfo
       Multiline       =   False
       Scope           =   0
       Style           =   "265449240"
-      TabOrder        =   50
+      TabOrder        =   51
       Text            =   "Secondary Email:"
+      TextAlign       =   0
       Top             =   196
       VerticalCenter  =   0
       Visible         =   True
@@ -920,8 +941,9 @@ Begin WebContainer conMemInfo
       ReadOnly        =   False
       Scope           =   0
       Style           =   "1951204359"
-      TabOrder        =   26
+      TabOrder        =   27
       Text            =   ""
+      TextAlign       =   0
       Top             =   195
       Type            =   2
       VerticalCenter  =   0
@@ -962,8 +984,9 @@ Begin WebContainer conMemInfo
       ReadOnly        =   False
       Scope           =   0
       Style           =   "1951204359"
-      TabOrder        =   27
+      TabOrder        =   28
       Text            =   ""
+      TextAlign       =   0
       Top             =   196
       Type            =   2
       VerticalCenter  =   0
@@ -1004,8 +1027,9 @@ Begin WebContainer conMemInfo
       ReadOnly        =   False
       Scope           =   0
       Style           =   "1951204359"
-      TabOrder        =   34
+      TabOrder        =   35
       Text            =   ""
+      TextAlign       =   0
       Top             =   325
       Type            =   0
       VerticalCenter  =   0
@@ -1040,8 +1064,9 @@ Begin WebContainer conMemInfo
       Multiline       =   False
       Scope           =   0
       Style           =   "265449240"
-      TabOrder        =   54
+      TabOrder        =   55
       Text            =   "Phone:"
+      TextAlign       =   0
       Top             =   325
       VerticalCenter  =   0
       Visible         =   True
@@ -1083,6 +1108,7 @@ Begin WebContainer conMemInfo
       Style           =   "1951204359"
       TabOrder        =   7
       Text            =   ""
+      TextAlign       =   0
       Top             =   104
       Type            =   0
       VerticalCenter  =   0
@@ -1117,8 +1143,9 @@ Begin WebContainer conMemInfo
       Multiline       =   False
       Scope           =   0
       Style           =   "265449240"
-      TabOrder        =   58
+      TabOrder        =   59
       Text            =   "Cell:"
+      TextAlign       =   0
       Top             =   105
       VerticalCenter  =   0
       Visible         =   True
@@ -1190,8 +1217,9 @@ Begin WebContainer conMemInfo
       ReadOnly        =   False
       Scope           =   0
       Style           =   "1951204359"
-      TabOrder        =   36
+      TabOrder        =   37
       Text            =   ""
+      TextAlign       =   0
       Top             =   270
       Type            =   0
       VerticalCenter  =   0
@@ -1226,8 +1254,9 @@ Begin WebContainer conMemInfo
       Multiline       =   False
       Scope           =   0
       Style           =   "265449240"
-      TabOrder        =   62
+      TabOrder        =   63
       Text            =   "Street Address:"
+      TextAlign       =   0
       Top             =   270
       VerticalCenter  =   0
       Visible         =   True
@@ -1261,12 +1290,13 @@ Begin WebContainer conMemInfo
       Multiline       =   False
       Scope           =   0
       Style           =   "265449240"
-      TabOrder        =   63
+      TabOrder        =   64
       Text            =   "Secondary:"
+      TextAlign       =   0
       Top             =   219
       VerticalCenter  =   0
       Visible         =   True
-      Width           =   76
+      Width           =   84
       ZIndex          =   1
       _DeclareLineRendered=   False
       _HorizontalPercent=   0.0
@@ -1302,8 +1332,9 @@ Begin WebContainer conMemInfo
       ReadOnly        =   False
       Scope           =   0
       Style           =   "1951204359"
-      TabOrder        =   37
+      TabOrder        =   38
       Text            =   ""
+      TextAlign       =   0
       Top             =   297
       Type            =   0
       VerticalCenter  =   0
@@ -1338,8 +1369,9 @@ Begin WebContainer conMemInfo
       Multiline       =   False
       Scope           =   0
       Style           =   "265449240"
-      TabOrder        =   65
+      TabOrder        =   66
       Text            =   "City, State Zip:"
+      TextAlign       =   0
       Top             =   297
       VerticalCenter  =   0
       Visible         =   True
@@ -1379,8 +1411,9 @@ Begin WebContainer conMemInfo
       ReadOnly        =   False
       Scope           =   0
       Style           =   "1951204359"
-      TabOrder        =   38
+      TabOrder        =   39
       Text            =   ""
+      TextAlign       =   0
       Top             =   297
       Type            =   0
       VerticalCenter  =   0
@@ -1421,8 +1454,9 @@ Begin WebContainer conMemInfo
       ReadOnly        =   False
       Scope           =   0
       Style           =   "1951204359"
-      TabOrder        =   39
+      TabOrder        =   40
       Text            =   ""
+      TextAlign       =   0
       Top             =   297
       Type            =   0
       VerticalCenter  =   0
@@ -1463,8 +1497,9 @@ Begin WebContainer conMemInfo
       ReadOnly        =   False
       Scope           =   0
       Style           =   "1951204359"
-      TabOrder        =   41
+      TabOrder        =   42
       Text            =   ""
+      TextAlign       =   0
       Top             =   325
       Type            =   0
       VerticalCenter  =   0
@@ -1499,8 +1534,9 @@ Begin WebContainer conMemInfo
       Multiline       =   False
       Scope           =   0
       Style           =   "265449240"
-      TabOrder        =   68
+      TabOrder        =   69
       Text            =   "Phone:"
+      TextAlign       =   0
       Top             =   325
       VerticalCenter  =   0
       Visible         =   True
@@ -1523,7 +1559,7 @@ Begin WebContainer conMemInfo
       HelpTag         =   ""
       HorizontalCenter=   0
       Index           =   -2147483648
-      Left            =   254
+      Left            =   259
       LockBottom      =   False
       LockedInPosition=   False
       LockHorizontal  =   False
@@ -1533,8 +1569,8 @@ Begin WebContainer conMemInfo
       LockVertical    =   False
       Scope           =   0
       Style           =   "0"
-      TabOrder        =   15
-      Top             =   153
+      TabOrder        =   16
+      Top             =   154
       Value           =   False
       VerticalCenter  =   0
       Visible         =   True
@@ -1557,7 +1593,7 @@ Begin WebContainer conMemInfo
       HelpTag         =   ""
       HorizontalCenter=   0
       Index           =   -2147483648
-      Left            =   605
+      Left            =   610
       LockBottom      =   False
       LockedInPosition=   False
       LockHorizontal  =   False
@@ -1567,8 +1603,8 @@ Begin WebContainer conMemInfo
       LockVertical    =   False
       Scope           =   0
       Style           =   "0"
-      TabOrder        =   21
-      Top             =   153
+      TabOrder        =   22
+      Top             =   154
       Value           =   False
       VerticalCenter  =   0
       Visible         =   True
@@ -1591,7 +1627,7 @@ Begin WebContainer conMemInfo
       HelpTag         =   ""
       HorizontalCenter=   0
       Index           =   -2147483648
-      Left            =   359
+      Left            =   364
       LockBottom      =   False
       LockedInPosition=   False
       LockHorizontal  =   False
@@ -1601,8 +1637,8 @@ Begin WebContainer conMemInfo
       LockVertical    =   False
       Scope           =   0
       Style           =   "0"
-      TabOrder        =   17
-      Top             =   153
+      TabOrder        =   18
+      Top             =   154
       Value           =   False
       VerticalCenter  =   0
       Visible         =   True
@@ -1625,7 +1661,7 @@ Begin WebContainer conMemInfo
       HelpTag         =   ""
       HorizontalCenter=   0
       Index           =   -2147483648
-      Left            =   15
+      Left            =   20
       LockBottom      =   False
       LockedInPosition=   False
       LockHorizontal  =   False
@@ -1636,9 +1672,10 @@ Begin WebContainer conMemInfo
       Multiline       =   False
       Scope           =   0
       Style           =   "54593926"
-      TabOrder        =   67
+      TabOrder        =   68
       Text            =   "Organizations:"
-      Top             =   153
+      TextAlign       =   0
+      Top             =   154
       VerticalCenter  =   0
       Visible         =   True
       Width           =   102
@@ -1679,6 +1716,7 @@ Begin WebContainer conMemInfo
       Style           =   "1951204359"
       TabOrder        =   0
       Text            =   ""
+      TextAlign       =   0
       Top             =   36
       Type            =   0
       VerticalCenter  =   0
@@ -1713,8 +1751,9 @@ Begin WebContainer conMemInfo
       Multiline       =   False
       Scope           =   0
       Style           =   "265449240"
-      TabOrder        =   60
+      TabOrder        =   61
       Text            =   "Title:"
+      TextAlign       =   0
       Top             =   36
       VerticalCenter  =   0
       Visible         =   True
@@ -1754,8 +1793,9 @@ Begin WebContainer conMemInfo
       ReadOnly        =   False
       Scope           =   0
       Style           =   "1951204359"
-      TabOrder        =   35
+      TabOrder        =   36
       Text            =   ""
+      TextAlign       =   0
       Top             =   243
       Type            =   0
       VerticalCenter  =   0
@@ -1790,8 +1830,9 @@ Begin WebContainer conMemInfo
       Multiline       =   False
       Scope           =   0
       Style           =   "265449240"
-      TabOrder        =   56
+      TabOrder        =   57
       Text            =   "Company:"
+      TextAlign       =   0
       Top             =   243
       VerticalCenter  =   0
       Visible         =   True
@@ -1825,8 +1866,9 @@ Begin WebContainer conMemInfo
       Multiline       =   False
       Scope           =   0
       Style           =   "265449240"
-      TabOrder        =   53
+      TabOrder        =   54
       Text            =   "Country:"
+      TextAlign       =   0
       Top             =   325
       VerticalCenter  =   0
       Visible         =   True
@@ -1845,7 +1887,7 @@ Begin WebContainer conMemInfo
       AutoCapitalize  =   True
       AutoComplete    =   True
       AutoCorrect     =   True
-      CueText         =   ""
+      CueText         =   "Leave Blank for US"
       Cursor          =   0
       Enabled         =   True
       HasFocusRing    =   True
@@ -1866,8 +1908,9 @@ Begin WebContainer conMemInfo
       ReadOnly        =   False
       Scope           =   0
       Style           =   "1951204359"
-      TabOrder        =   40
+      TabOrder        =   41
       Text            =   ""
+      TextAlign       =   0
       Top             =   325
       Type            =   0
       VerticalCenter  =   0
@@ -1887,7 +1930,7 @@ Begin WebContainer conMemInfo
       AutoCapitalize  =   True
       AutoComplete    =   True
       AutoCorrect     =   True
-      CueText         =   ""
+      CueText         =   "Leave Blank for US"
       Cursor          =   0
       Enabled         =   True
       HasFocusRing    =   True
@@ -1908,8 +1951,9 @@ Begin WebContainer conMemInfo
       ReadOnly        =   False
       Scope           =   0
       Style           =   "1951204359"
-      TabOrder        =   33
+      TabOrder        =   34
       Text            =   ""
+      TextAlign       =   0
       Top             =   325
       Type            =   0
       VerticalCenter  =   0
@@ -1944,8 +1988,9 @@ Begin WebContainer conMemInfo
       Multiline       =   False
       Scope           =   0
       Style           =   "265449240"
-      TabOrder        =   42
+      TabOrder        =   43
       Text            =   "Country:"
+      TextAlign       =   0
       Top             =   325
       VerticalCenter  =   0
       Visible         =   True
@@ -1968,7 +2013,7 @@ Begin WebContainer conMemInfo
       HelpTag         =   ""
       HorizontalCenter=   0
       Index           =   -2147483648
-      Left            =   479
+      Left            =   484
       LockBottom      =   False
       LockedInPosition=   False
       LockHorizontal  =   False
@@ -1978,8 +2023,8 @@ Begin WebContainer conMemInfo
       LockVertical    =   False
       Scope           =   0
       Style           =   "0"
-      TabOrder        =   19
-      Top             =   153
+      TabOrder        =   20
+      Top             =   154
       Value           =   False
       VerticalCenter  =   0
       Visible         =   True
@@ -2002,7 +2047,7 @@ Begin WebContainer conMemInfo
       HelpTag         =   ""
       HorizontalCenter=   0
       Index           =   -2147483648
-      Left            =   662
+      Left            =   667
       LockBottom      =   False
       LockedInPosition=   False
       LockHorizontal  =   False
@@ -2012,8 +2057,8 @@ Begin WebContainer conMemInfo
       LockVertical    =   False
       Scope           =   0
       Style           =   "0"
-      TabOrder        =   22
-      Top             =   153
+      TabOrder        =   23
+      Top             =   154
       Value           =   False
       VerticalCenter  =   0
       Visible         =   True
@@ -2047,8 +2092,9 @@ Begin WebContainer conMemInfo
       Multiline       =   False
       Scope           =   0
       Style           =   "265449240"
-      TabOrder        =   55
+      TabOrder        =   56
       Text            =   "Company:"
+      TextAlign       =   0
       Top             =   243
       VerticalCenter  =   0
       Visible         =   True
@@ -2088,8 +2134,9 @@ Begin WebContainer conMemInfo
       ReadOnly        =   False
       Scope           =   0
       Style           =   "1951204359"
-      TabOrder        =   28
+      TabOrder        =   29
       Text            =   ""
+      TextAlign       =   0
       Top             =   243
       Type            =   0
       VerticalCenter  =   0
@@ -2124,8 +2171,9 @@ Begin WebContainer conMemInfo
       Multiline       =   False
       Scope           =   0
       Style           =   "265449240"
-      TabOrder        =   47
+      TabOrder        =   48
       Text            =   "Name Prefix:"
+      TextAlign       =   0
       Top             =   36
       VerticalCenter  =   0
       Visible         =   True
@@ -2159,8 +2207,9 @@ Begin WebContainer conMemInfo
       Multiline       =   False
       Scope           =   0
       Style           =   "265449240"
-      TabOrder        =   59
+      TabOrder        =   60
       Text            =   "Suffix:"
+      TextAlign       =   0
       Top             =   71
       VerticalCenter  =   0
       Visible         =   True
@@ -2202,6 +2251,7 @@ Begin WebContainer conMemInfo
       Style           =   "1951204359"
       TabOrder        =   5
       Text            =   ""
+      TextAlign       =   0
       Top             =   70
       Type            =   0
       VerticalCenter  =   0
@@ -2225,7 +2275,7 @@ Begin WebContainer conMemInfo
       HelpTag         =   ""
       HorizontalCenter=   0
       Index           =   -2147483648
-      Left            =   544
+      Left            =   549
       LockBottom      =   False
       LockedInPosition=   False
       LockHorizontal  =   False
@@ -2235,8 +2285,8 @@ Begin WebContainer conMemInfo
       LockVertical    =   False
       Scope           =   0
       Style           =   "0"
-      TabOrder        =   20
-      Top             =   153
+      TabOrder        =   21
+      Top             =   154
       Value           =   False
       VerticalCenter  =   0
       Visible         =   True
@@ -2259,7 +2309,7 @@ Begin WebContainer conMemInfo
       HelpTag         =   ""
       HorizontalCenter=   0
       Index           =   -2147483648
-      Left            =   428
+      Left            =   433
       LockBottom      =   False
       LockedInPosition=   False
       LockHorizontal  =   False
@@ -2269,8 +2319,8 @@ Begin WebContainer conMemInfo
       LockVertical    =   False
       Scope           =   0
       Style           =   "0"
-      TabOrder        =   18
-      Top             =   153
+      TabOrder        =   19
+      Top             =   154
       Value           =   False
       VerticalCenter  =   0
       Visible         =   True
@@ -2293,7 +2343,7 @@ Begin WebContainer conMemInfo
       HelpTag         =   ""
       HorizontalCenter=   0
       Index           =   -2147483648
-      Left            =   713
+      Left            =   718
       LockBottom      =   False
       LockedInPosition=   False
       LockHorizontal  =   False
@@ -2303,8 +2353,8 @@ Begin WebContainer conMemInfo
       LockVertical    =   False
       Scope           =   0
       Style           =   "0"
-      TabOrder        =   23
-      Top             =   153
+      TabOrder        =   24
+      Top             =   154
       Value           =   False
       VerticalCenter  =   0
       Visible         =   True
@@ -2327,7 +2377,7 @@ Begin WebContainer conMemInfo
       HelpTag         =   ""
       HorizontalCenter=   0
       Index           =   -2147483648
-      Left            =   771
+      Left            =   776
       LockBottom      =   False
       LockedInPosition=   False
       LockHorizontal  =   False
@@ -2337,8 +2387,8 @@ Begin WebContainer conMemInfo
       LockVertical    =   False
       Scope           =   0
       Style           =   "0"
-      TabOrder        =   24
-      Top             =   153
+      TabOrder        =   25
+      Top             =   154
       Value           =   False
       VerticalCenter  =   0
       Visible         =   True
@@ -2361,7 +2411,7 @@ Begin WebContainer conMemInfo
       HelpTag         =   ""
       HorizontalCenter=   0
       Index           =   -2147483648
-      Left            =   830
+      Left            =   835
       LockBottom      =   False
       LockedInPosition=   False
       LockHorizontal  =   False
@@ -2371,8 +2421,8 @@ Begin WebContainer conMemInfo
       LockVertical    =   False
       Scope           =   0
       Style           =   "0"
-      TabOrder        =   25
-      Top             =   153
+      TabOrder        =   26
+      Top             =   154
       Value           =   False
       VerticalCenter  =   0
       Visible         =   True
@@ -2395,7 +2445,7 @@ Begin WebContainer conMemInfo
       HelpTag         =   ""
       HorizontalCenter=   0
       Index           =   -2147483648
-      Left            =   193
+      Left            =   198
       LockBottom      =   False
       LockedInPosition=   False
       LockHorizontal  =   False
@@ -2405,8 +2455,8 @@ Begin WebContainer conMemInfo
       LockVertical    =   False
       Scope           =   0
       Style           =   "0"
-      TabOrder        =   14
-      Top             =   153
+      TabOrder        =   15
+      Top             =   154
       Value           =   False
       VerticalCenter  =   0
       Visible         =   True
@@ -2429,7 +2479,7 @@ Begin WebContainer conMemInfo
       HelpTag         =   ""
       HorizontalCenter=   0
       Index           =   -2147483648
-      Left            =   113
+      Left            =   118
       LockBottom      =   False
       LockedInPosition=   False
       LockHorizontal  =   False
@@ -2439,8 +2489,8 @@ Begin WebContainer conMemInfo
       LockVertical    =   False
       Scope           =   0
       Style           =   "0"
-      TabOrder        =   13
-      Top             =   153
+      TabOrder        =   14
+      Top             =   154
       Value           =   False
       VerticalCenter  =   0
       Visible         =   True
@@ -2482,6 +2532,7 @@ Begin WebContainer conMemInfo
       Style           =   "1951204359"
       TabOrder        =   6
       Text            =   ""
+      TextAlign       =   0
       Top             =   70
       Type            =   0
       VerticalCenter  =   0
@@ -2516,8 +2567,9 @@ Begin WebContainer conMemInfo
       Multiline       =   False
       Scope           =   0
       Style           =   "265449240"
-      TabOrder        =   57
+      TabOrder        =   58
       Text            =   "Badge:"
+      TextAlign       =   0
       Top             =   70
       VerticalCenter  =   0
       Visible         =   True
@@ -2559,6 +2611,7 @@ Begin WebContainer conMemInfo
       Style           =   "1951204359"
       TabOrder        =   4
       Text            =   ""
+      TextAlign       =   0
       Top             =   71
       Type            =   0
       VerticalCenter  =   0
@@ -2593,7 +2646,7 @@ Begin WebContainer conMemInfo
       LockVertical    =   False
       Scope           =   0
       Style           =   "1791807016"
-      TabOrder        =   11
+      TabOrder        =   12
       Text            =   ""
       Top             =   104
       VerticalCenter  =   0
@@ -2617,7 +2670,7 @@ Begin WebContainer conMemInfo
       HelpTag         =   ""
       HorizontalCenter=   0
       Index           =   -2147483648
-      Left            =   769
+      Left            =   153
       LockBottom      =   False
       LockedInPosition=   False
       LockHorizontal  =   False
@@ -2627,11 +2680,11 @@ Begin WebContainer conMemInfo
       LockVertical    =   False
       Scope           =   0
       Style           =   "0"
-      TabOrder        =   12
-      Top             =   104
+      TabOrder        =   13
+      Top             =   370
       Value           =   False
       VerticalCenter  =   0
-      Visible         =   True
+      Visible         =   False
       Width           =   103
       ZIndex          =   1
       _DeclareLineRendered=   False
@@ -2651,7 +2704,7 @@ Begin WebContainer conMemInfo
       HelpTag         =   ""
       HorizontalCenter=   0
       Index           =   -2147483648
-      Left            =   311
+      Left            =   316
       LockBottom      =   False
       LockedInPosition=   False
       LockHorizontal  =   False
@@ -2661,8 +2714,8 @@ Begin WebContainer conMemInfo
       LockVertical    =   False
       Scope           =   0
       Style           =   "0"
-      TabOrder        =   16
-      Top             =   153
+      TabOrder        =   17
+      Top             =   154
       Value           =   False
       VerticalCenter  =   0
       Visible         =   True
@@ -2678,6 +2731,7 @@ Begin WebContainer conMemInfo
       _VerticalPercent=   0.0
    End
    Begin WebButton btnEdit
+      AutoDisable     =   False
       Caption         =   "Edit"
       Cursor          =   0
       Enabled         =   True
@@ -2695,7 +2749,7 @@ Begin WebContainer conMemInfo
       LockVertical    =   False
       Scope           =   0
       Style           =   "-1"
-      TabOrder        =   69
+      TabOrder        =   70
       Top             =   370
       VerticalCenter  =   0
       Visible         =   True
@@ -2711,6 +2765,7 @@ Begin WebContainer conMemInfo
       _VerticalPercent=   0.0
    End
    Begin WebButton btnSave
+      AutoDisable     =   False
       Caption         =   "Save"
       Cursor          =   0
       Enabled         =   False
@@ -2728,7 +2783,7 @@ Begin WebContainer conMemInfo
       LockVertical    =   False
       Scope           =   0
       Style           =   "0"
-      TabOrder        =   70
+      TabOrder        =   71
       Top             =   370
       VerticalCenter  =   0
       Visible         =   True
@@ -2762,8 +2817,9 @@ Begin WebContainer conMemInfo
       Multiline       =   False
       Scope           =   0
       Style           =   "584613819"
-      TabOrder        =   71
+      TabOrder        =   72
       Text            =   "Press edit to change your information:"
+      TextAlign       =   0
       Top             =   0
       VerticalCenter  =   0
       Visible         =   True
@@ -2776,6 +2832,80 @@ Begin WebContainer conMemInfo
       _NeedsRendering =   True
       _OfficialControl=   False
       _OpenEventFired =   False
+      _VerticalPercent=   0.0
+   End
+   Begin WebCheckbox chkTexting
+      Caption         =   "I would like to Opt Out of receiving  membership renewal reminders and society related important announcements via text messages "
+      Cursor          =   1
+      Enabled         =   True
+      Height          =   22
+      HelpTag         =   ""
+      HorizontalCenter=   0
+      Index           =   -2147483648
+      Left            =   15
+      LockBottom      =   False
+      LockedInPosition=   False
+      LockHorizontal  =   False
+      LockLeft        =   True
+      LockRight       =   False
+      LockTop         =   True
+      LockVertical    =   False
+      Scope           =   0
+      Style           =   "1710913587"
+      TabOrder        =   8
+      Top             =   130
+      Value           =   False
+      VerticalCenter  =   0
+      Visible         =   True
+      Width           =   880
+      ZIndex          =   1
+      _DeclareLineRendered=   False
+      _HorizontalPercent=   0.0
+      _IsEmbedded     =   False
+      _Locked         =   False
+      _NeedsRendering =   True
+      _OfficialControl=   False
+      _OpenEventFired =   False
+      _VerticalPercent=   0.0
+   End
+   Begin YNDiag YNDiag1
+      Cursor          =   0
+      Enabled         =   True
+      Height          =   300
+      HelpTag         =   ""
+      HorizontalCenter=   0
+      Index           =   -2147483648
+      Left            =   0
+      LockBottom      =   False
+      LockedInPosition=   False
+      LockHorizontal  =   False
+      LockLeft        =   True
+      LockRight       =   False
+      LockTop         =   True
+      LockVertical    =   False
+      MinHeight       =   0
+      MinWidth        =   0
+      Resizable       =   True
+      Result          =   False
+      Scope           =   0
+      Style           =   "-1"
+      TabOrder        =   -1
+      TabPanelIndex   =   0
+      Title           =   "Untitled"
+      Top             =   0
+      Type            =   1
+      VerticalCenter  =   0
+      Visible         =   True
+      Width           =   300
+      ZIndex          =   1
+      _DeclareLineRendered=   False
+      _HorizontalPercent=   0.0
+      _IsEmbedded     =   False
+      _Locked         =   False
+      _NeedsRendering =   True
+      _OfficialControl=   False
+      _OpenEventFired =   False
+      _ShownEventFired=   False
       _VerticalPercent=   0.0
    End
 End
@@ -2813,14 +2943,15 @@ End
 		    Return lbValid
 		  end
 		  
-		  if lbObj.Name = "txtPhoneHome" or  lbObj.Name = "txtPhoneCell" then
-		    if lbObj.Text = "" then
-		      txtSPhone.Style = EntryFieldsError
+		  if lbObj.Name = "txtPhoneCell" then
+		    if lbObj.Text = "" and chkTexting.Value then
 		      txtPhoneCell.Style = EntryFieldsError
 		      lbValid = False
+		      Return lbValid
 		    else
-		      txtSPhone.Style = EntryFields
 		      txtPhoneCell.Style = EntryFields
+		      lbValid = True
+		      Return lbValid
 		    end
 		    
 		  end
@@ -2892,6 +3023,8 @@ End
 		  oSQL.AddTable "tblaspechaptercodes"
 		  oSQL.AddFields "ChapterName"
 		  oSQL.AddOrderClause "ChapterName"
+		  oSQL.AddSimpleWhereClause("Inactive", "0")
+		  
 		  lsSQL = oSQL.SQL
 		  
 		  rs = Session.sesAspeDB.SQLSelect(lsSql)
@@ -3011,6 +3144,9 @@ End
 		  txtSCountry.Text = ChkStr(rs.Field("SCountry").StringValue)
 		  txtSPhone.Text = ChkStr(rs.Field("SPhone").StringValue)
 		  
+		  chkTexting.Value = rs.Field("TextingOptOut").BooleanValue
+		  mdTexting = Nil
+		  
 		  if InStr(0, "Sent To VPM 1, Sent To VPM 2, Back From VPM, Active Member, Renewal", rs.Field("MemStatus").StringValue ) > 0 then
 		    frmUpdateInfo.mbIsMember = True
 		  else
@@ -3088,6 +3224,20 @@ End
 	#tag EndMethod
 
 	#tag Method, Flags = &h0
+		Sub SaveButtonPressed()
+		  
+		  If not SaveMemInfo then
+		    MsgBox("Unable to Save Information")
+		    return
+		  end
+		  btnSave.Enabled = False
+		  btnEdit.Caption = "Edit"
+		  SetReadOnly(Self, False)
+		  
+		End Sub
+	#tag EndMethod
+
+	#tag Method, Flags = &h0
 		Function SaveMemInfo() As Boolean
 		  
 		  Dim lsStr as String
@@ -3121,6 +3271,17 @@ End
 		    oSQL.AddValues  cboChapterName.Text,  msRegion, frmUpdateInfo.msNewChapterCode
 		  end
 		  
+		  if txtPCountry.Text = "USA" or txtPCountry.Text = "United States" or txtPCountry.Text = "United States of America" or _
+		    txtPCountry.Text = "U.S." or txtPCountry.Text = "U.S.A." or txtPCountry.Text = "U.S."  _
+		    or txtPCountry.Text = "US"  then
+		    txtPCountry.Text = ""
+		  end
+		  
+		  if txtSCountry.Text = "USA" or txtSCountry.Text = "United States" or txtSCountry.Text = "United States of America" or _
+		    txtSCountry.Text = "U.S." or txtSCountry.Text = "U.S.A." or txtSCountry.Text = "U.S."  _
+		    or txtSCountry.Text = "US"  then
+		    txtSCountry.Text = ""
+		  end
 		  
 		  oSQL.AddFields "NamePrefix",                "FirstName", "Middle",  "LastName",   "Birthday",                "Title"
 		  oSQL.AddValues popNamePrefix.Text, txtFirst.Text, txtMiddle.Text, txtLast.Text, ldBDay.SQLDate, txtTitle.Text
@@ -3142,6 +3303,15 @@ End
 		  
 		  oSQL.AddFields "NSPE",        "NFPA",              "SFPE",              "WTO",              "ASME",             "MailInvoice"
 		  oSQL.AddValues chkNSPE.Value, chkNFPA.Value, chkSFPE.Value, chkWTO.Value, chkASME.Value, chkMailInvoice.Value
+		  
+		  oSQL.AddFields "TextingOptOut"
+		  oSQL.AddValues chkTexting.value
+		  
+		  if mdTexting <> Nil then
+		    oSQL.AddFields "TextingDate"
+		    oSQL.AddValues mdTexting
+		  end
+		  
 		  
 		  oSQL.AddSimpleWhereClause "PersonID",  Session.gnPersonID
 		  
@@ -3251,14 +3421,14 @@ End
 		  Dim IbValid, lbReturnVal as Boolean
 		  lbReturnVal = True
 		  
-		  
+		  lbReturnVal = SetValid(DidValidate(txtPhoneCell), lbReturnVal)
 		  
 		  lbReturnVal = SetValid(DidValidate(txtFirst), lbReturnVal)
 		  lbReturnVal = SetValid(DidValidate(txtLast), lbReturnVal)
 		  lbReturnVal = SetValid(DidValidate(txtBDayMonth), lbReturnVal)
 		  lbReturnVal = SetValid(DidValidate(txtBDayDay), lbReturnVal)
 		  lbReturnVal = SetValid(DidValidate(txtBDayYear), lbReturnVal)
-		  'lbReturnVal = SetValid(DidValidate(txtPhoneCell), lbReturnVal)
+		  '
 		  lbReturnVal = SetValid(DidValidate(txtPPhone), lbReturnVal)
 		  lbReturnVal = SetValid(DidValidate(txtPrimaryEmail), lbReturnVal)
 		  lbReturnVal = SetValid(DidValidate(txtPCity), lbReturnVal)
@@ -3295,6 +3465,10 @@ End
 
 	#tag Property, Flags = &h0
 		mbIsCPD As Boolean
+	#tag EndProperty
+
+	#tag Property, Flags = &h0
+		mdTexting As Date
 	#tag EndProperty
 
 	#tag Property, Flags = &h0
@@ -3412,7 +3586,7 @@ End
 	#tag Event
 		Sub LostFocus()
 		  Call DidValidate(Me)
-		  if me.Text.InStr(0, "CPD") > 0 and Not mbIsCPD then
+		  if (me.Text.InStr(0, "CPD") > 0 and me.Text.InStr(0, "CPDT") = 0) and Not mbIsCPD then
 		    MsgBox("I'm sorry you can not make yourself a CPD. For more information contact us at: certification@aspe.org.")
 		    me.Text = msNameSuffix
 		  ELSE
@@ -3453,6 +3627,8 @@ End
 	#tag Event
 		Sub Action()
 		  If me.Caption = "Edit" then
+		    Session.ConfirmMessage = "If you leave this page, you will loose all your data. Do not use the Browser's Back Button"
+		    
 		    SetReadOnly(Self, True)
 		    me.Caption = "Cancel"
 		    btnSave.Enabled = True
@@ -3471,14 +3647,40 @@ End
 	#tag Event
 		Sub Action()
 		  If not ValidateAll then return
-		  If not SaveMemInfo then
-		    MsgBox("Unable to Save Information")
-		    return
-		  end
-		  btnSave.Enabled = False
-		  btnEdit.Caption = "Edit"
-		  SetReadOnly(Self, False)
 		  
+		  'if frmUpdateInfo.mbIsMember and txtPhoneCell.text <> "" then
+		  '
+		  'YNDiag1.YNQuestion("Since you have a Cell Phone, would you like to be reminded when your membership is about to expire?")
+		  '
+		  '
+		  'else
+		  Session.ConfirmMessage = ""
+		  
+		  SaveButtonPressed
+		  'end
+		  
+		  
+		End Sub
+	#tag EndEvent
+#tag EndEvents
+#tag Events chkTexting
+	#tag Event
+		Sub ValueChanged()
+		  mdTexting = Today
+		End Sub
+	#tag EndEvent
+#tag EndEvents
+#tag Events YNDiag1
+	#tag Event
+		Sub DoNoStuff()
+		  SaveButtonPressed
+		End Sub
+	#tag EndEvent
+	#tag Event
+		Sub DoYesStuff()
+		  chkTexting.Value = True
+		  SaveButtonPressed
+		  return
 		End Sub
 	#tag EndEvent
 #tag EndEvents
@@ -3491,7 +3693,7 @@ End
 		Type="Integer"
 		EditorType="Enum"
 		#tag EnumValues
-			"0 - Auto"
+			"0 - Automatic"
 			"1 - Standard Pointer"
 			"2 - Finger Pointer"
 			"3 - IBeam"
@@ -3502,10 +3704,10 @@ End
 			"8 - Arrow South"
 			"9 - Arrow East"
 			"10 - Arrow West"
-			"11 - Arrow North East"
-			"12 - Arrow North West"
-			"13 - Arrow South East"
-			"14 - Arrow South West"
+			"11 - Arrow Northeast"
+			"12 - Arrow Northwest"
+			"13 - Arrow Southeast"
+			"14 - Arrow Southwest"
 			"15 - Splitter East West"
 			"16 - Splitter North South"
 			"17 - Progress"
