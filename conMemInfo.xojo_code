@@ -3016,19 +3016,20 @@ End
 		Sub LoadChapters()
 		  Dim lsSql as String
 		  Dim rs as RecordSet
-		  Dim oSQL as new cSmartSQL
+		  'Dim oSQL as new cSmartSQL
+		  '
+		  'oSQL.AutoBracket = False
+		  '
+		  'oSQL.AddTable "tblaspechaptercodes"
+		  'oSQL.AddFields "ChapterName"
+		  'oSQL.AddOrderClause "ChapterName"
+		  'oSQL.AddSimpleWhereClause("Inactive", "0")
 		  
-		  oSQL.AutoBracket = False
-		  
-		  oSQL.AddTable "tblaspechaptercodes"
-		  oSQL.AddFields "ChapterName"
-		  oSQL.AddOrderClause "ChapterName"
-		  oSQL.AddSimpleWhereClause("Inactive", "0")
-		  
-		  lsSQL = oSQL.SQL
+		  lsSQL = "Select ChapterName from tblaspechaptercodes where Inactive = 0 order by ChapterName"
 		  
 		  rs = Session.sesAspeDB.SQLSelect(lsSql)
 		  
+		  if Session.sesAspeDB.CheckDBError("DB 0859 - Load chapters") then return
 		  
 		  if rs = nil or rs.RecordCount = 0 then
 		    MsgBox( "No Chapter Names Found found")
@@ -3845,6 +3846,8 @@ End
 			"0 - Automatic"
 			"1 - Always"
 			"2 - Never"
+			"3 - Vertical"
+			"4 - Horizontal"
 		#tag EndEnumValues
 	#tag EndViewProperty
 	#tag ViewProperty

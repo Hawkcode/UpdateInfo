@@ -13,16 +13,37 @@ Inherits WebApplication
 
 	#tag Event
 		Function UnhandledException(Error As RuntimeException) As Boolean
-		  dim ls as String
+		  Try
+		    dim log as string
+		    dim d as new date
+		    log = log + d.SQLDateTime + EndOfLine
+		    log = log + Error.Message + EndOfLine + error.Reason + join(error.stack, EndOfLine)
+		    
+		    'f= GetFolderItem("log.txt")
+		    Dim f As FolderItem = GetFolderItem("AppErrorLog.txt")
+		    Dim t as TextOutputStream
+		    If f <> Nil then
+		      t = TextOutputStream.Append(f)
+		      t.WriteLine(log)
+		      t.Close
+		    End If 
+		    Return true
+		  Catch
+		    Return True
+		  end
 		  
-		  ls = "Runtime Exception: " + Error.Type + EndOfLine + _
-		  "                           Reason: " + error.Reason + EndOfLine + _
-		  "                     Error Number: " + error.ErrorNumber.ToText + EndOfLine + _
-		  "                          Message: " + error.Message + EndOfLine + _
-		  "                            Stack: " + Join(error.Stack())
-		  WriteLog(ls)
 		  
-		  Return False
+		  
+		  'dim ls as String
+		  '
+		  'ls = "Runtime Exception: " + Error.Type + EndOfLine + _
+		  '"                           Reason: " + error.Reason + EndOfLine + _
+		  '"                     Error Number: " + error.ErrorNumber.ToText + EndOfLine + _
+		  '"                          Message: " + error.Message + EndOfLine + _
+		  '"                            Stack: " + Join(error.Stack())
+		  'WriteLog(ls)
+		  '
+		  'Return False
 		End Function
 	#tag EndEvent
 

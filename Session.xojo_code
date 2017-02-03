@@ -32,6 +32,29 @@ Inherits WebSession
 		End Sub
 	#tag EndEvent
 
+	#tag Event
+		Function UnhandledException(Error As RuntimeException) As Boolean
+		  Try
+		    dim log as string
+		    dim d as new date
+		    log = log + d.SQLDateTime + EndOfLine
+		    log = log + Error.Message + EndOfLine + error.Reason + join(error.stack, EndOfLine)
+		    
+		    'f= GetFolderItem("log.txt")
+		    Dim f As FolderItem = GetFolderItem("SessionErrorLog.txt")
+		    Dim t as TextOutputStream
+		    If f <> Nil then
+		      t = TextOutputStream.Append(f)
+		      t.WriteLine(log)
+		      t.Close
+		    End If 
+		    Return true
+		  Catch
+		    Return True
+		  end
+		End Function
+	#tag EndEvent
+
 
 	#tag Property, Flags = &h0
 		gnPersonID As Integer
@@ -98,6 +121,7 @@ Inherits WebSession
 				"8 - Android"
 				"9 - Blackberry"
 				"10 - OperaMini"
+				"11 - Epiphany"
 			#tag EndEnumValues
 		#tag EndViewProperty
 		#tag ViewProperty
@@ -209,6 +233,7 @@ Inherits WebSession
 				"10 - iPad"
 				"11 - AndroidTablet"
 				"12 - AndroidPhone"
+				"13 - RaspberryPi"
 			#tag EndEnumValues
 		#tag EndViewProperty
 		#tag ViewProperty
@@ -234,7 +259,13 @@ Inherits WebSession
 				"2 - Gecko"
 				"3 - Trident"
 				"4 - Presto"
+				"5 - EdgeHTML"
 			#tag EndEnumValues
+		#tag EndViewProperty
+		#tag ViewProperty
+			Name="ScaleFactor"
+			Group="Behavior"
+			Type="Double"
 		#tag EndViewProperty
 		#tag ViewProperty
 			Name="StatusMessage"
@@ -270,6 +301,12 @@ Inherits WebSession
 			Name="URL"
 			Group="Behavior"
 			Type="String"
+			EditorType="MultiLineEditor"
+		#tag EndViewProperty
+		#tag ViewProperty
+			Name="_baseurl"
+			Group="Behavior"
+			Type="string"
 			EditorType="MultiLineEditor"
 		#tag EndViewProperty
 		#tag ViewProperty
