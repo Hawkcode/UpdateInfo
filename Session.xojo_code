@@ -19,7 +19,7 @@ Inherits WebSession
 		    exit
 		  end
 		  
-		  Self.Timeout = 300
+		  Self.Timeout = 600
 		End Sub
 	#tag EndEvent
 

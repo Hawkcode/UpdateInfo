@@ -3088,11 +3088,19 @@ End
 		  txtMiddle.Text = ChkStr(rs.Field("Middle").StringValue)
 		  txtLast.Text = ChkStr(rs.Field("LastName").StringValue)
 		  
-		  if ChkStr(rs.Field("NameSuffix").StringValue).InStr(0, "CPD") > 0 then
+		  if ChkStr(rs.Field("NameSuffix").StringValue).InStr(0, "CPDT") > 0  then
+		    mbIsCPDT = True
+		  else
+		    mbIsCPDT = False
+		  end
+		  
+		  if ChkStr(rs.Field("NameSuffix").StringValue).InStr(0, "CPD") > 0  and not mbIsCPDT then
 		    mbIsCPD = True
 		  else
 		    mbIsCPD = False
 		  end
+		  
+		  
 		  
 		  msNameSuffix = ChkStr(rs.Field("NameSuffix").StringValue)
 		  txtNameSuffix.Text = ChkStr(rs.Field("NameSuffix").StringValue)
@@ -3469,6 +3477,10 @@ End
 	#tag EndProperty
 
 	#tag Property, Flags = &h0
+		mbIsCPDT As Boolean
+	#tag EndProperty
+
+	#tag Property, Flags = &h0
 		mdTexting As Date
 	#tag EndProperty
 
@@ -3587,10 +3599,25 @@ End
 	#tag Event
 		Sub LostFocus()
 		  Call DidValidate(Me)
-		  if (me.Text.InStr(0, "CPD") > 0 and me.Text.InStr(0, "CPDT") = 0) and Not mbIsCPD then
-		    MsgBox("I'm sorry you can not make yourself a CPD. For more information contact us at: certification@aspe.org.")
+		  Dim lbCPDCheck As Boolean = False
+		  
+		  if (me.Text.InStr(0, "CPDT") > 0) and Not mbIsCPDT then
+		    MsgBox("I'm sorry you can not make yourself a CPDT. For more information contact us at: certification@aspe.org.")
 		    me.Text = msNameSuffix
-		  ELSE
+		    lbCPDCheck = True
+		    
+		  end
+		  
+		  if not (mbIsCPDT and not lbCPDCheck)  then
+		    if (me.Text.InStr(0, "CPD") > 0 ) and (Not mbIsCPD)   then
+		      MsgBox("I'm sorry you can not make yourself a CPD. For more information contact us at: certification@aspe.org.")
+		      me.Text = msNameSuffix
+		      lbCPDCheck = True
+		      
+		    end
+		  end
+		  
+		  if not lbCPDCheck then
 		    msNameSuffix = me.Text
 		  end
 		End Sub
@@ -3808,6 +3835,11 @@ End
 	#tag EndViewProperty
 	#tag ViewProperty
 		Name="mbIsCPD"
+		Group="Behavior"
+		Type="Boolean"
+	#tag EndViewProperty
+	#tag ViewProperty
+		Name="mbIsCPDT"
 		Group="Behavior"
 		Type="Boolean"
 	#tag EndViewProperty

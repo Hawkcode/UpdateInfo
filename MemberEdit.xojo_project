@@ -1,5 +1,5 @@
 Type=Web
-RBProjectVersion=2016.041
+RBProjectVersion=2017.011
 MinIDEVersion=20110400
 WebView=YNDiag;YNDiag.xojo_code;&h59BE7FF;&h0;false
 Class=cInvalidValueException;cInvalidValueException.xojo_code;&h79A17742;&h0;false
@@ -37,7 +37,7 @@ DefaultWindow=frmUpdateInfo
 MajorVersion=1
 MinorVersion=0
 SubVersion=0
-NonRelease=41
+NonRelease=42
 Release=0
 InfoVersion=
 LongVersion=
