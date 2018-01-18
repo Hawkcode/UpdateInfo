@@ -53,6 +53,7 @@ Begin WebPage frmUpdateInfo
       LockTop         =   True
       LockVertical    =   False
       mbIsCPD         =   False
+      mbIsCPDT        =   False
       msEmail         =   ""
       msNameSuffix    =   ""
       msRegion        =   ""
@@ -204,6 +205,12 @@ End
 		Sub Close()
 		  App.Quit
 		  Session.Quit
+		End Sub
+	#tag EndEvent
+
+	#tag Event
+		Sub Open()
+		  
 		End Sub
 	#tag EndEvent
 

@@ -8,18 +8,18 @@ Inherits WebSession
 		  
 		  'MsgBox("Web UserID = " + Str(gnUid))
 		  
-		  sesWebDB = New WebDB
-		  if not sesWebDB.OpenDB then
-		    MsgBox("Unable to connect to ASPE's web server, Please try later.")
-		    exit
-		  end
 		  sesAspeDB = New aspeDB
 		  if not sesAspeDB.OpenDB then
 		    MsgBox("Unable to connect to ASPE's server, Please try later.")
 		    exit
 		  end
+		  sesWebDB = New WebDB
+		  if not sesWebDB.OpenDB then
+		    MsgBox("Unable to connect to ASPE's web server, Please try later.")
+		    exit
+		  end
 		  
-		  Self.Timeout = 600
+		  'Self.Timeout = 600
 		End Sub
 	#tag EndEvent
 

@@ -41,6 +41,8 @@ Inherits MySQLCommunityServer
 		  self.Port = gnDBPort     ' 3306   'lnPort
 		  self.Host = gsHost    '"aspe.org"  'lsServer
 		  
+		  'msgbox("ASPE) " +gsUserName + ", " + gsPassword)
+		  
 		  
 		  if self.Connect = false then
 		    'self = nil
@@ -84,11 +86,11 @@ Inherits MySQLCommunityServer
 	#tag EndProperty
 
 	#tag Property, Flags = &h0
-		gsPassword As String = "AsPe8614"
+		gsPassword As String = "fr3eCave97!!"
 	#tag EndProperty
 
 	#tag Property, Flags = &h0
-		gsUserName As String = "aspe"
+		gsUserName As String = "aspe_user"
 	#tag EndProperty
 
 
@@ -169,6 +171,12 @@ Inherits MySQLCommunityServer
 			Visible=true
 			Type="Integer"
 			EditorType="Integer"
+		#tag EndViewProperty
+		#tag ViewProperty
+			Name="SecureAuth"
+			Visible=true
+			Type="Boolean"
+			EditorType="Boolean"
 		#tag EndViewProperty
 		#tag ViewProperty
 			Name="SSLAuthority"

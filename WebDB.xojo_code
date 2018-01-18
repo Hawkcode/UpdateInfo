@@ -42,6 +42,8 @@ Inherits MySQLCommunityServer
 		  self.Host = gsHostWS    '"aspe.org"  'lsServer
 		  
 		  
+		  'msgbox("(Web)" +gsUserNameWS + ", " + gsPasswordWS)
+		  
 		  if self.Connect = false then
 		    'self = nil
 		    MsgBox(self.ErrorMessage)
@@ -84,11 +86,11 @@ Inherits MySQLCommunityServer
 	#tag EndProperty
 
 	#tag Property, Flags = &h0
-		gsPasswordWS As String = "2fEzdTCdi"
+		gsPasswordWS As String = "fr3eCave97!!"
 	#tag EndProperty
 
 	#tag Property, Flags = &h0
-		gsUserNameWS As String = "d7upgradedb"
+		gsUserNameWS As String = "aspe_d7upgradedb"
 	#tag EndProperty
 
 	#tag Property, Flags = &h0
@@ -179,6 +181,12 @@ Inherits MySQLCommunityServer
 			Visible=true
 			Type="Integer"
 			EditorType="Integer"
+		#tag EndViewProperty
+		#tag ViewProperty
+			Name="SecureAuth"
+			Visible=true
+			Type="Boolean"
+			EditorType="Boolean"
 		#tag EndViewProperty
 		#tag ViewProperty
 			Name="SSLAuthority"
