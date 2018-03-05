@@ -152,7 +152,7 @@ Begin WebPage frmUpdateInfo
       CertificateFile =   
       CertificatePassword=   ""
       CertificateRejectionFile=   
-      ConnectionType  =   2
+      ConnectionType  =   5
       Index           =   -2147483648
       LockedInPosition=   False
       Scope           =   0
@@ -210,7 +210,7 @@ End
 
 	#tag Event
 		Sub Open()
-		  
+		  'MsgBox("on form open")
 		End Sub
 	#tag EndEvent
 

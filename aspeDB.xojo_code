@@ -86,7 +86,7 @@ Inherits MySQLCommunityServer
 	#tag EndProperty
 
 	#tag Property, Flags = &h0
-		gsPassword As String = "fr3eCave97!!"
+		gsPassword As String = "fr3eCave97"
 	#tag EndProperty
 
 	#tag Property, Flags = &h0
