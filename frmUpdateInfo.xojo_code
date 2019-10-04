@@ -154,12 +154,14 @@ Begin WebPage frmUpdateInfo
       CertificateRejectionFile=   
       ConnectionType  =   5
       Index           =   -2147483648
+      Left            =   0.0
       LockedInPosition=   False
       Scope           =   0
       Secure          =   False
       SMTPConnectionMode=   0
-      Style           =   "-1"
+      Style           =   "0"
       TabPanelIndex   =   0
+      Top             =   0.0
    End
    Begin WebLabel lblVersion
       Cursor          =   1
@@ -179,7 +181,7 @@ Begin WebPage frmUpdateInfo
       LockVertical    =   False
       Multiline       =   False
       Scope           =   0
-      Style           =   "-1"
+      Style           =   "0"
       TabOrder        =   2
       Text            =   ""
       TextAlign       =   0
@@ -260,16 +262,49 @@ End
 	#tag EndMethod
 
 	#tag Method, Flags = &h0
+		Sub LoadEmailSettings()
+		  Dim rs as RecordSet
+		  dim lsSql as String = "Select * from __dataDefaults;"
+		  
+		  rs = Session.sesAspeDB.SQLSelect(lsSql)
+		  
+		  if Session.sesAspeDB.CheckDBError("Can't load email settings!") then return
+		  
+		  
+		  csBulkMailSMTPUserID = rs.Field("BulkEmailUser").StringValue
+		  csBulkMailSMTPServer = rs.Field("BulkEmailServer").StringValue
+		  csBulkEmailSMTPPassword = rs.Field("BulkEmailPW").StringValue
+		  cnBulkEmailPort = rs.Field("BulkEmailPort").IntegerValue
+		  
+		  
+		End Sub
+	#tag EndMethod
+
+	#tag Method, Flags = &h0
 		Sub SendNotification()
 		  Dim Msg as New EmailMessage
 		  
 		  
-		  SMTPServer = New SMTPServer
+		  #if TargetXojoCloud then
+		    mfwPort = New XojoCloud.FirewallPort(cnBulkEmailPort, XojoCloud.FirewallPort.Direction.Outgoing)
+		    mfwPort.Open() // This call is synchronous
+		    If not mfwPort.isOpen() Then
+		      
+		      MsgBox("FirewallPort is not Open")
+		      return
+		      // Do what you need to do
+		      'fwp.Close() // Optional, but if you will not using the port, we recommend it.
+		    End If
+		  #Endif
 		  
-		  SMTPServer.Address = "localhost" 'csBulkMailSMTPServer
-		  SMTPServer.Port = 25 'cnBulkEmailPort
-		  SMTPServer.Username = ""   'csBulkMailSMTPUserID
-		  SMTPServer.Password = ""   'csBulkEmailSMTPPassword
+		  SMTPServer = New SMTPServer
+		  SMTPServer.Address = csBulkMailSMTPServer
+		  SMTPServer.Port = cnBulkEmailPort
+		  SMTPServer.Username = csBulkMailSMTPUserID
+		  SMTPServer.Password = csBulkEmailSMTPPassword
+		  
+		  
+		  
 		  Msg.FromAddress = "Membership@aspe.org"
 		  Msg.AddCCRecipient "Membership@aspe.org"
 		  
@@ -304,6 +339,10 @@ End
 
 	#tag Property, Flags = &h0
 		mbIsMember As Boolean
+	#tag EndProperty
+
+	#tag Property, Flags = &h21
+		Private mfwPort As XojoCloud.FirewallPort
 	#tag EndProperty
 
 	#tag Property, Flags = &h0

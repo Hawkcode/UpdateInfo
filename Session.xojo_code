@@ -4,22 +4,41 @@ Inherits WebSession
 	#tag Event
 		Sub Open()
 		  
-		  gnUid = URLParameter("uid").Val
-		  
-		  'MsgBox("Web UserID = " + Str(gnUid))
 		  
 		  sesAspeDB = New aspeDB
 		  if not sesAspeDB.OpenDB then
 		    MsgBox("Unable to connect to ASPE's server, Please try later.")
 		    exit
 		  end
+		  
 		  sesWebDB = New WebDB
 		  if not sesWebDB.OpenDB then
 		    MsgBox("Unable to connect to ASPE's web server, Please try later.")
 		    exit
 		  end
 		  
-		  'Self.Timeout = 600
+		  If URLParameter("uid") <> "" then
+		    
+		    // run some code  if not finale release
+		    gnUid = URLParameter("uid").Val
+		    gnPid = GetPID(gnUid)
+		  else
+		    If URLParameter("pid") = "" then
+		      MsgBox("Need parameter uid or pid!")
+		      Return
+		    end
+		    gnPid = URLParameter("pid").Val
+		    
+		  end
+		  
+		  
+		  
+		  
+		  'MsgBox("Web UserID = " + Str(gnPid))
+		  
+		  
+		  Self.Timeout = 300
+		  
 		End Sub
 	#tag EndEvent
 
@@ -28,7 +47,7 @@ Inherits WebSession
 		  
 		  Self.Quit
 		  
-		  ShowURL("Https://aspe.org")
+		  'ShowURL("Https://aspe.org")
 		End Sub
 	#tag EndEvent
 
@@ -57,7 +76,15 @@ Inherits WebSession
 
 
 	#tag Property, Flags = &h0
+		gbTesting As Boolean
+	#tag EndProperty
+
+	#tag Property, Flags = &h0
 		gnPersonID As Integer
+	#tag EndProperty
+
+	#tag Property, Flags = &h0
+		gnPid As Integer
 	#tag EndProperty
 
 	#tag Property, Flags = &h0
@@ -95,6 +122,9 @@ Inherits WebSession
 	#tag EndConstant
 
 	#tag Constant, Name = NoJavascriptMessage, Type = String, Dynamic = True, Default = \"Javascript must be enabled to access this page.", Scope = Public
+	#tag EndConstant
+
+	#tag Constant, Name = UseUID, Type = Boolean, Dynamic = False, Default = \"True", Scope = Public
 	#tag EndConstant
 
 
@@ -157,7 +187,7 @@ Inherits WebSession
 			Type="Integer"
 		#tag EndViewProperty
 		#tag ViewProperty
-			Name="gnUid"
+			Name="gnPid"
 			Group="Behavior"
 			Type="Integer"
 		#tag EndViewProperty
@@ -329,6 +359,16 @@ Inherits WebSession
 				"0 - AJAX"
 				"1 - WebSocket"
 			#tag EndEnumValues
+		#tag EndViewProperty
+		#tag ViewProperty
+			Name="gbTesting"
+			Group="Behavior"
+			Type="Boolean"
+		#tag EndViewProperty
+		#tag ViewProperty
+			Name="gnUid"
+			Group="Behavior"
+			Type="Integer"
 		#tag EndViewProperty
 	#tag EndViewBehavior
 End Class

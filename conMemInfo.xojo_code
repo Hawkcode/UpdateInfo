@@ -14,6 +14,7 @@ Begin WebContainer conMemInfo
    LockRight       =   True
    LockTop         =   True
    LockVertical    =   False
+   ScrollbarsVisible=   0
    Style           =   "149482928"
    TabOrder        =   0
    Top             =   0
@@ -39,6 +40,7 @@ Begin WebContainer conMemInfo
       Index           =   -2147483648
       InitialValue    =   "Mr.\nMs.\nMiss\nMrs.\nDr."
       Left            =   480
+      ListCount       =   0
       ListIndex       =   -1
       LockBottom      =   False
       LockedInPosition=   False
@@ -1559,7 +1561,7 @@ Begin WebContainer conMemInfo
       HelpTag         =   ""
       HorizontalCenter=   0
       Index           =   -2147483648
-      Left            =   259
+      Left            =   268
       LockBottom      =   False
       LockedInPosition=   False
       LockHorizontal  =   False
@@ -1593,7 +1595,7 @@ Begin WebContainer conMemInfo
       HelpTag         =   ""
       HorizontalCenter=   0
       Index           =   -2147483648
-      Left            =   610
+      Left            =   593
       LockBottom      =   False
       LockedInPosition=   False
       LockHorizontal  =   False
@@ -1627,7 +1629,7 @@ Begin WebContainer conMemInfo
       HelpTag         =   ""
       HorizontalCenter=   0
       Index           =   -2147483648
-      Left            =   364
+      Left            =   333
       LockBottom      =   False
       LockedInPosition=   False
       LockHorizontal  =   False
@@ -2013,7 +2015,7 @@ Begin WebContainer conMemInfo
       HelpTag         =   ""
       HorizontalCenter=   0
       Index           =   -2147483648
-      Left            =   484
+      Left            =   463
       LockBottom      =   False
       LockedInPosition=   False
       LockHorizontal  =   False
@@ -2047,7 +2049,7 @@ Begin WebContainer conMemInfo
       HelpTag         =   ""
       HorizontalCenter=   0
       Index           =   -2147483648
-      Left            =   667
+      Left            =   652
       LockBottom      =   False
       LockedInPosition=   False
       LockHorizontal  =   False
@@ -2275,7 +2277,7 @@ Begin WebContainer conMemInfo
       HelpTag         =   ""
       HorizontalCenter=   0
       Index           =   -2147483648
-      Left            =   549
+      Left            =   528
       LockBottom      =   False
       LockedInPosition=   False
       LockHorizontal  =   False
@@ -2309,7 +2311,7 @@ Begin WebContainer conMemInfo
       HelpTag         =   ""
       HorizontalCenter=   0
       Index           =   -2147483648
-      Left            =   433
+      Left            =   404
       LockBottom      =   False
       LockedInPosition=   False
       LockHorizontal  =   False
@@ -2343,7 +2345,7 @@ Begin WebContainer conMemInfo
       HelpTag         =   ""
       HorizontalCenter=   0
       Index           =   -2147483648
-      Left            =   718
+      Left            =   710
       LockBottom      =   False
       LockedInPosition=   False
       LockHorizontal  =   False
@@ -2377,7 +2379,7 @@ Begin WebContainer conMemInfo
       HelpTag         =   ""
       HorizontalCenter=   0
       Index           =   -2147483648
-      Left            =   776
+      Left            =   771
       LockBottom      =   False
       LockedInPosition=   False
       LockHorizontal  =   False
@@ -2445,7 +2447,7 @@ Begin WebContainer conMemInfo
       HelpTag         =   ""
       HorizontalCenter=   0
       Index           =   -2147483648
-      Left            =   198
+      Left            =   205
       LockBottom      =   False
       LockedInPosition=   False
       LockHorizontal  =   False
@@ -2636,6 +2638,7 @@ Begin WebContainer conMemInfo
       Index           =   -2147483648
       InitialValue    =   ""
       Left            =   580
+      ListCount       =   0
       ListIndex       =   -1
       LockBottom      =   False
       LockedInPosition=   False
@@ -2696,40 +2699,6 @@ Begin WebContainer conMemInfo
       _OpenEventFired =   False
       _VerticalPercent=   0.0
    End
-   Begin WebCheckbox chkAYP
-      Caption         =   "AYP"
-      Cursor          =   1
-      Enabled         =   True
-      Height          =   22
-      HelpTag         =   ""
-      HorizontalCenter=   0
-      Index           =   -2147483648
-      Left            =   316
-      LockBottom      =   False
-      LockedInPosition=   False
-      LockHorizontal  =   False
-      LockLeft        =   True
-      LockRight       =   False
-      LockTop         =   True
-      LockVertical    =   False
-      Scope           =   0
-      Style           =   "0"
-      TabOrder        =   17
-      Top             =   154
-      Value           =   False
-      VerticalCenter  =   0
-      Visible         =   True
-      Width           =   53
-      ZIndex          =   1
-      _DeclareLineRendered=   False
-      _HorizontalPercent=   0.0
-      _IsEmbedded     =   False
-      _Locked         =   False
-      _NeedsRendering =   True
-      _OfficialControl=   False
-      _OpenEventFired =   False
-      _VerticalPercent=   0.0
-   End
    Begin WebButton btnEdit
       AutoDisable     =   False
       Caption         =   "Edit"
@@ -2748,7 +2717,7 @@ Begin WebContainer conMemInfo
       LockTop         =   True
       LockVertical    =   False
       Scope           =   0
-      Style           =   "-1"
+      Style           =   "0"
       TabOrder        =   70
       Top             =   370
       VerticalCenter  =   0
@@ -2888,7 +2857,7 @@ Begin WebContainer conMemInfo
       Resizable       =   True
       Result          =   False
       Scope           =   0
-      Style           =   "-1"
+      Style           =   "0"
       TabOrder        =   -1
       TabPanelIndex   =   0
       Title           =   "Untitled"
@@ -2921,7 +2890,7 @@ End
 	#tag Event
 		Sub Shown()
 		  LoadChapters
-		  LoadInfo(Session.gnUid)
+		  LoadInfo(Session.gnPid)
 		  SetReadOnly(Self, False)
 		  popNamePrefix.SetFocus
 		End Sub
@@ -3055,16 +3024,12 @@ End
 	#tag EndMethod
 
 	#tag Method, Flags = &h0
-		Sub LoadInfo(lnUid as Integer)
+		Sub LoadInfo(lnPid as Integer)
 		  Dim rs as RecordSet
 		  Dim lsSql as String
-		  Dim lnPid as Integer
 		  
-		  'lnUid = 64923
+		  'lnPid = 71332 'RSA Test
 		  
-		  lnPid = GetPID(lnUid)
-		  
-		  'MsgBox("Pid:" + Str(lnPid) + "<<")
 		  
 		  If lnPid = 0 then
 		    MsgBox("I'm sorry but ASPE does not have any record of you in their database or ASPE's server is down." + EndOfLine + EndOfLine + _
@@ -3075,9 +3040,11 @@ End
 		  
 		  Session.gnPersonID = lnPid
 		  
-		  lsSql = "Select * from tblPeople where PersonID = " + Str(lnPid)
+		  lsSql = "Select * from trakdata.tblPeople where PersonID = " + Str(lnPid)
 		  
-		  rs =Session.sesAspeDB.SQLSelect(lsSql)
+		  rs = Session.sesAspeDB.SQLSelect(lsSql)
+		  
+		  if Session.sesAspeDB.CheckDBError then return
 		  
 		  cboChapterName.SetPopMenuValue( ChkStr(rs.Field("ChapterName").StringValue))
 		  frmUpdateInfo.msPreviousChapter = ChkStr(rs.Field("ChapterName").StringValue)
@@ -3093,6 +3060,8 @@ End
 		  else
 		    mbIsCPDT = False
 		  end
+		  
+		  
 		  
 		  if ChkStr(rs.Field("NameSuffix").StringValue).InStr(0, "CPD") > 0  and not mbIsCPDT then
 		    mbIsCPD = True
@@ -3129,7 +3098,6 @@ End
 		  chkSFPE.Value = rs.Field("SFPE").BooleanValue
 		  chkWTO.Value = rs.Field("WTO").BooleanValue
 		  chkASME.Value = rs.Field("ASME").BooleanValue
-		  chkAYP.Value = rs.Field("AYE").BooleanValue
 		  chkMailInvoice.Value = rs.Field("MailInvoice").BooleanValue
 		  
 		  txtPrimaryEmail.Text = ChkStr(rs.Field("EMail").StringValue)
@@ -3307,8 +3275,8 @@ End
 		  oSQL.AddValues txtPrimaryEmail.Text, txtSecondaryEmail.Text, Today.SQLDate,  "WebSite", txtNameSuffix.Text, txtPhoneCell.Text, txtBadge.Text
 		  
 		  
-		  oSQL.AddFields  "ASHRAE",             "ASSE",             "PHCC",              "PCA",         "MCCA",          "IAPMO",                  "ICC",            "AYE"
-		  oSQL.AddValues chkASHRAE.Value, chkASSE.Value, chkPHCC.Value, chkPCA.Value, chkMCCA.Value, chkIAPMO.Value, chkICC.Value, chkAYP.Value
+		  oSQL.AddFields  "ASHRAE",             "ASSE",             "PHCC",              "PCA",         "MCCA",          "IAPMO",                  "ICC"
+		  oSQL.AddValues chkASHRAE.Value, chkASSE.Value, chkPHCC.Value, chkPCA.Value, chkMCCA.Value, chkIAPMO.Value, chkICC.Value
 		  
 		  oSQL.AddFields "NSPE",        "NFPA",              "SFPE",              "WTO",              "ASME",             "MailInvoice"
 		  oSQL.AddValues chkNSPE.Value, chkNFPA.Value, chkSFPE.Value, chkWTO.Value, chkASME.Value, chkMailInvoice.Value
@@ -3325,7 +3293,6 @@ End
 		  oSQL.AddSimpleWhereClause "PersonID",  Session.gnPersonID
 		  
 		  Session.sesAspeDB.SQLExecute(oSQL.SQL)
-		  
 		  
 		  
 		  if Session.sesAspeDB.CheckDBError then
@@ -3347,37 +3314,8 @@ End
 		  
 		  Session.sesAspeDB.SQLExecute(oSQL.SQL)
 		  
-		  Dim lsSql as String
-		  lsSql = "Select uid from d_users where mail='" +  txtPrimaryEmail.Text + "' and uid <> " + Str(Session.gnUid)
-		  rs = Session.sesWebDB.SQLSelect(lsSql)
-		  if Session.sesWebDB.Error then
-		    MsgBox Session.sesWebDB.ErrorMessage
-		    Return False
-		  end
-		  if rs.RecordCount > 0 then
-		    lsSql = "Update d_users set mail = """ + "XXXX " + txtPrimaryEmail.Text + """ "+ "   where uid = " + Str(rs.Field("uid").StringValue)
-		    Session.sesWebDB.SQLExecute(lsSql)
-		    if Session.sesWebDB.Error then
-		      MsgBox Session.sesWebDB.ErrorMessage
-		      Return False
-		    end
-		  end
-		  
-		  
-		  
-		  if  msEmail <> txtPrimaryEmail.Text then
-		    lsSql = "Update d_users set mail = """ + txtPrimaryEmail.Text + """  where uid = " + Str(Session.gnUid)
-		    Session.sesWebDB.SQLExecute(lsSql)
-		    if Session.sesWebDB.Error then
-		      MsgBox Session.sesWebDB.ErrorMessage
-		      Return False
-		    end
-		  end
-		  
-		  if Session.sesAspeDB.Error then
-		    MsgBox Session.sesAspeDB.ErrorMessage
-		    Return False
-		  end
+		  If Session.sesAspeDB.CheckDBError then Return False
+		  '
 		  
 		  
 		  if mbChapterChanged then
@@ -3663,7 +3601,7 @@ End
 		    txtTitle.SetFocus
 		  else
 		    btnSave.Enabled = False
-		    LoadInfo(Session.gnUid)
+		    LoadInfo(Session.gnPid)
 		    SetReadOnly(Self, False)
 		    me.Caption = "Edit"
 		  end

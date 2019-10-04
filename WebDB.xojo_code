@@ -34,13 +34,19 @@ Inherits MySQLCommunityServer
 		  
 		  self.SQLExecute("Set NameS 'utf8'")
 		  
-		  
-		  self.DatabaseName = gsDatabaseNameWS   ' "aspesql3" 'lsDataBaseName
-		  self.Password = gsPasswordWS     '"7Ut6ctxL"  'lsPassword
-		  self.UserName =  gsUserNameWS  '"aspesql3"   'lsUser
-		  self.Port = gnDBPortWS     ' 3306   'lnPort
-		  self.Host = gsHostWS    '"aspe.org"  'lsServer
-		  
+		  #if TargetXojoCloud then
+		    self.DatabaseName = gsDatabaseName   ' "aspesql3" 'lsDataBaseName
+		    self.Password = gsPassword     '"7Ut6ctxL"  'lsPassword
+		    self.UserName =  gsUserName  '"aspesql3"   'lsUser
+		    self.Port = gnDBPort     ' 3306   'lnPort
+		    self.Host = gsHost    '"aspe.org"  'lsServer
+		  #else
+		    self.DatabaseName = gsDatabaseNameWS   ' "aspesql3" 'lsDataBaseName
+		    self.Password = gsPasswordWS     '"7Ut6ctxL"  'lsPassword
+		    self.UserName =  gsUserNameWS  '"aspesql3"   'lsUser
+		    self.Port = gnDBPortWS     ' 3306   'lnPort
+		    self.Host = gsHostWS    '"aspe.org"  'lsServer
+		  #endif
 		  
 		  'msgbox("(Web)" +gsUserNameWS + ", " + gsPasswordWS)
 		  
@@ -70,6 +76,10 @@ Inherits MySQLCommunityServer
 	#tag EndProperty
 
 	#tag Property, Flags = &h0
+		gnDBPort As Integer = 3306
+	#tag EndProperty
+
+	#tag Property, Flags = &h0
 		gnDBPortWS As Integer = 3306
 	#tag EndProperty
 
@@ -78,7 +88,15 @@ Inherits MySQLCommunityServer
 	#tag EndProperty
 
 	#tag Property, Flags = &h0
+		gsDatabaseName As String = "trakdata"
+	#tag EndProperty
+
+	#tag Property, Flags = &h0
 		gsDatabaseNameWS As String = "d7upgradedb"
+	#tag EndProperty
+
+	#tag Property, Flags = &h0
+		gsHost As String = "127.0.0.1"
 	#tag EndProperty
 
 	#tag Property, Flags = &h0
@@ -86,7 +104,15 @@ Inherits MySQLCommunityServer
 	#tag EndProperty
 
 	#tag Property, Flags = &h0
+		gsPassword As String = "fr3eCave97"
+	#tag EndProperty
+
+	#tag Property, Flags = &h0
 		gsPasswordWS As String = "fr3eCave97"
+	#tag EndProperty
+
+	#tag Property, Flags = &h0
+		gsUserName As String = "aspe_user"
 	#tag EndProperty
 
 	#tag Property, Flags = &h0

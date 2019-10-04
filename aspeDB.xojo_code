@@ -4,7 +4,8 @@ Inherits MySQLCommunityServer
 	#tag Method, Flags = &h0
 		Function CheckDBError(lsPrompt as String = "") As Boolean
 		  if self.Error then
-		    'frmAppllcation.ExecuteJavaScript("alert('Database Error: " + str(.gDB.ErrorCode) + EndOfLine + EndOfLine + Session.gDB.ErrorMessage + EndOfLine + EndOfLine +lsPrompt + "');")
+		    Msgbox("Database Error: " + str(Me.ErrorCode) + EndOfLine + EndOfLine + Me.ErrorMessage + EndOfLine + EndOfLine +lsPrompt + "');")
+		    
 		    Return True
 		  else
 		    Return False

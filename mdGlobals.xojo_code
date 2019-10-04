@@ -294,10 +294,14 @@ Protected Module mdGlobals
 
 	#tag Method, Flags = &h0
 		Function GetPID(lnUID as Integer = 0) As Integer
+		  
+		  
 		  DIM lsSql, lsEmail AS STRING
 		  Dim rsD as RecordSet
 		  Dim lbFound as Boolean
 		  Dim ls As String
+		  
+		  Dim MySession as Session = Session
 		  
 		  'if not Session.Available then
 		  'app.WriteLog("Session Not Available: ")
@@ -306,37 +310,35 @@ Protected Module mdGlobals
 		  'end
 		  
 		  
-		  Try
-		    lbFound = False
-		    if lnUID <> 0 then
-		      lsSql = "SELECT d_profile_value.fid, d_profile_value.value, d_profile_value.uid FROM d_profile_value "
-		      lsSql = lsSql + "WHERE d_profile_value.fid = 17 and d_profile_value.uid = " + Str(lnUID)
-		      
-		      'MsgBox(lssql)
-		      'if not ConnectWS then
-		      '
-		      'Return 0
-		      'end
-		      '
-		      rsD = Session.sesWebDB.SQLSelect(lsSql)
-		      if  not IsNull(rsD) then
-		        if not Session.sesWebDB.CheckDBError then
-		          if rsD.RecordCount  > 0 then
-		            Return rsD.Field("value").IntegerValue
-		          end
-		        end
+		  'Try
+		  lbFound = False
+		  if lnUID <> 0 then
+		    lsSql = "SELECT d_profile_value.fid, d_profile_value.value, d_profile_value.uid FROM d_profile_value "
+		    lsSql = lsSql + "WHERE d_profile_value.fid = 17 and d_profile_value.uid = " + Str(lnUID)
+		    
+		    'MsgBox(lssql)
+		    'if not ConnectWS then
+		    '
+		    'Return 0
+		    'end
+		    '
+		    rsD = Session.sesWebDB.SQLSelect(lsSql)
+		    if not Session.sesWebDB.CheckDBError then
+		      if rsD.RecordCount  > 0 then
+		        Return rsD.Field("value").IntegerValue
 		      end
 		    end
-		  Catch error As RunTimeException
-		    ls = "Runtime Exception: 122801 " + Error.Type + EndOfLine + _
-		    "                           Reason: " + error.Reason + EndOfLine + _
-		    "                     Error Number: " + error.ErrorNumber.ToText + EndOfLine + _
-		    "                          Message: " + error.Message + EndOfLine + _
-		    "                            Stack: " + Join(error.Stack())
-		    App.WriteLog(ls)
-		    
-		    Return 0
-		  End Try
+		  end
+		  'Catch error As RunTimeException
+		  'ls = "Runtime Exception: 122801 " + Error.Type + EndOfLine + _
+		  '"                           Reason: " + error.Reason + EndOfLine + _
+		  '"                     Error Number: " + error.ErrorNumber.ToText + EndOfLine + _
+		  '"                          Message: " + error.Message + EndOfLine + _
+		  '"                            Stack: " + Join(error.Stack())
+		  'App.WriteLog(ls)
+		  '
+		  'Return 0
+		  'End Try
 		  Try
 		    if lnUID = 0 then Return 0
 		    
@@ -367,7 +369,7 @@ Protected Module mdGlobals
 		      end
 		      
 		      lsSql = "Select PersonID from tblPeople where Email = '" + lsEmail + "' "
-		      rsD = Session.sesAspeDB.SQLSelect(lsSql)
+		      rsD = Session.sesWebDB.SQLSelect(lsSql)
 		    Catch Error As RunTimeException
 		      ls = "Runtime Exception: 122803" + Error.Type + EndOfLine + _
 		      "                           Reason: " + error.Reason + EndOfLine + _
@@ -385,7 +387,7 @@ Protected Module mdGlobals
 		    Try
 		      
 		      if  not IsNull(rsD) then
-		        if not Session.sesAspeDB.CheckDBError then
+		        if not Session.sesWebDB.CheckDBError then
 		          if rsD.RecordCount  > 0 then
 		            Return rsD.Field("PersonID").IntegerValue
 		          else
@@ -1049,6 +1051,22 @@ Protected Module mdGlobals
 
 
 	#tag Property, Flags = &h0
+		cnBulkEmailPort As Integer
+	#tag EndProperty
+
+	#tag Property, Flags = &h0
+		csBulkEmailSMTPPassword As String
+	#tag EndProperty
+
+	#tag Property, Flags = &h0
+		csBulkMailSMTPServer As String
+	#tag EndProperty
+
+	#tag Property, Flags = &h0
+		csBulkMailSMTPUserID As String
+	#tag EndProperty
+
+	#tag Property, Flags = &h0
 		gbClose As Boolean = False
 	#tag EndProperty
 
@@ -1243,29 +1261,6 @@ Protected Module mdGlobals
 	#tag Property, Flags = &h0
 		gTempPID As Integer
 	#tag EndProperty
-
-
-	#tag Constant, Name = cnBulkEmailEmailPort, Type = Double, Dynamic = False, Default = \"", Scope = Public
-		#Tag Instance, Platform = Any, Language = Default, Definition  = \"465"
-	#tag EndConstant
-
-	#tag Constant, Name = csBulkEmailSMTPPassword, Type = String, Dynamic = False, Default = \"", Scope = Public
-		#Tag Instance, Platform = Any, Language = Default, Definition  = \"wolfmail"
-	#tag EndConstant
-
-	#tag Constant, Name = csBulkMailSMTPServer, Type = String, Dynamic = False, Default = \"", Scope = Public
-		#Tag Instance, Platform = Any, Language = Default, Definition  = \"relay.jangosmtp.net"
-	#tag EndConstant
-
-	#tag Constant, Name = csBulkMailSMTPUserID, Type = String, Dynamic = False, Default = \"", Scope = Public
-		#Tag Instance, Platform = Any, Language = Default, Definition  = \"aspechamp"
-	#tag EndConstant
-
-	#tag Constant, Name = Untitled, Type = , Dynamic = False, Default = \"", Scope = Public
-	#tag EndConstant
-
-	#tag Constant, Name = Untitled1, Type = , Dynamic = False, Default = \"", Scope = Public
-	#tag EndConstant
 
 
 	#tag ViewBehavior
