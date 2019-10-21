@@ -3207,6 +3207,12 @@ End
 		    MsgBox("Unable to Save Information")
 		    return
 		  end
+		  
+		  msPidsHL = session.gnPid.ToText
+		  
+		  DoPushPID
+		  
+		  
 		  btnSave.Enabled = False
 		  btnEdit.Caption = "Edit"
 		  SetReadOnly(Self, False)

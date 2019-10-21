@@ -211,6 +211,15 @@ End
 	#tag EndEvent
 
 	#tag Event
+		Sub DoubleClick(X As Integer, Y As Integer, Details As REALbasic.MouseEvent)
+		  If Session.URLParameter("session") = "8614" then
+		    MsgBox("Sessions: " + App.SessionCount.ToText)
+		  end
+		  
+		End Sub
+	#tag EndEvent
+
+	#tag Event
 		Sub Open()
 		  'MsgBox("on form open")
 		End Sub

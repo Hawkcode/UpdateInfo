@@ -4,6 +4,10 @@ Inherits WebSession
 	#tag Event
 		Sub Open()
 		  
+		  if not modHLDBFunction.openDBHL then
+		    MsgBox("Unable to connect to ASPE's server for HL, Please try later.")
+		    exit
+		  end
 		  
 		  sesAspeDB = New aspeDB
 		  if not sesAspeDB.OpenDB then
@@ -37,7 +41,7 @@ Inherits WebSession
 		  'MsgBox("Web UserID = " + Str(gnPid))
 		  
 		  
-		  Self.Timeout = 300
+		  Self.Timeout = 600
 		  
 		End Sub
 	#tag EndEvent
@@ -45,7 +49,7 @@ Inherits WebSession
 	#tag Event
 		Sub TimedOut()
 		  
-		  Self.Quit
+		  'Self.Quit
 		  
 		  'ShowURL("Https://aspe.org")
 		End Sub

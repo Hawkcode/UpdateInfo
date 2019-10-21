@@ -1263,6 +1263,10 @@ Protected Module mdGlobals
 	#tag EndProperty
 
 
+	#tag Constant, Name = khlUI, Type = Boolean, Dynamic = False, Default = \"False", Scope = Public
+	#tag EndConstant
+
+
 	#tag ViewBehavior
 		#tag ViewProperty
 			Name="gbClose"
@@ -1543,6 +1547,26 @@ Protected Module mdGlobals
 			Group="Position"
 			InitialValue="0"
 			Type="Integer"
+		#tag EndViewProperty
+		#tag ViewProperty
+			Name="cnBulkEmailPort"
+			Group="Behavior"
+			Type="Integer"
+		#tag EndViewProperty
+		#tag ViewProperty
+			Name="csBulkEmailSMTPPassword"
+			Group="Behavior"
+			Type="String"
+		#tag EndViewProperty
+		#tag ViewProperty
+			Name="csBulkMailSMTPServer"
+			Group="Behavior"
+			Type="String"
+		#tag EndViewProperty
+		#tag ViewProperty
+			Name="csBulkMailSMTPUserID"
+			Group="Behavior"
+			Type="String"
 		#tag EndViewProperty
 	#tag EndViewBehavior
 End Module
