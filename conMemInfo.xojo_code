@@ -1742,7 +1742,7 @@ Begin WebContainer conMemInfo
       HelpTag         =   ""
       HorizontalCenter=   0
       Index           =   -2147483648
-      Left            =   24
+      Left            =   71
       LockBottom      =   False
       LockedInPosition=   False
       LockHorizontal  =   False
@@ -1755,7 +1755,7 @@ Begin WebContainer conMemInfo
       Style           =   "265449240"
       TabOrder        =   61
       Text            =   "Title:"
-      TextAlign       =   0
+      TextAlign       =   3
       Top             =   36
       VerticalCenter  =   0
       Visible         =   True
@@ -2708,7 +2708,7 @@ Begin WebContainer conMemInfo
       HelpTag         =   ""
       HorizontalCenter=   0
       Index           =   -2147483648
-      Left            =   662
+      Left            =   651
       LockBottom      =   False
       LockedInPosition=   False
       LockHorizontal  =   False
@@ -2742,7 +2742,7 @@ Begin WebContainer conMemInfo
       HelpTag         =   ""
       HorizontalCenter=   0
       Index           =   -2147483648
-      Left            =   771
+      Left            =   760
       LockBottom      =   False
       LockedInPosition=   False
       LockHorizontal  =   False
@@ -2788,11 +2788,11 @@ Begin WebContainer conMemInfo
       Style           =   "584613819"
       TabOrder        =   72
       Text            =   "Press edit to change your information:"
-      TextAlign       =   0
+      TextAlign       =   1
       Top             =   0
       VerticalCenter  =   0
       Visible         =   True
-      Width           =   874
+      Width           =   271
       ZIndex          =   1
       _DeclareLineRendered=   False
       _HorizontalPercent=   0.0
@@ -2875,6 +2875,149 @@ Begin WebContainer conMemInfo
       _OfficialControl=   False
       _OpenEventFired =   False
       _ShownEventFired=   False
+      _VerticalPercent=   0.0
+   End
+   Begin WebProgressWheel ProgWh
+      Cursor          =   0
+      Enabled         =   True
+      Height          =   32
+      HelpTag         =   ""
+      HorizontalCenter=   0
+      Index           =   -2147483648
+      Left            =   866
+      LockBottom      =   False
+      LockedInPosition=   False
+      LockHorizontal  =   False
+      LockLeft        =   True
+      LockRight       =   False
+      LockTop         =   True
+      LockVertical    =   False
+      Scope           =   0
+      Style           =   "0"
+      TabOrder        =   -1
+      Top             =   363
+      Type            =   0
+      VerticalCenter  =   0
+      Visible         =   False
+      Width           =   32
+      ZIndex          =   1
+      _DeclareLineRendered=   False
+      _HorizontalPercent=   0.0
+      _IsEmbedded     =   False
+      _Locked         =   False
+      _NeedsRendering =   True
+      _OfficialControl=   False
+      _OpenEventFired =   False
+      _VerticalPercent=   0.0
+   End
+   Begin WebTimer Timer1
+      Cursor          =   0
+      Enabled         =   True
+      HelpTag         =   ""
+      HorizontalCenter=   0
+      Index           =   -2147483648
+      Left            =   0.0
+      LockBottom      =   False
+      LockedInPosition=   False
+      LockHorizontal  =   False
+      LockLeft        =   False
+      LockRight       =   False
+      LockTop         =   False
+      LockVertical    =   False
+      Mode            =   0
+      Period          =   10
+      Scope           =   0
+      Style           =   "0"
+      TabOrder        =   -1
+      Top             =   0.0
+      VerticalCenter  =   0
+      ZIndex          =   1
+      _DeclareLineRendered=   False
+      _HorizontalPercent=   0.0
+      _IsEmbedded     =   False
+      _Locked         =   False
+      _NeedsRendering =   True
+      _OfficialControl=   False
+      _OpenEventFired =   False
+      _VerticalPercent=   0.0
+   End
+   Begin WebLabel Label33
+      Cursor          =   1
+      Enabled         =   True
+      HasFocusRing    =   True
+      Height          =   22
+      HelpTag         =   ""
+      HorizontalCenter=   0
+      Index           =   -2147483648
+      Left            =   480
+      LockBottom      =   False
+      LockedInPosition=   False
+      LockHorizontal  =   False
+      LockLeft        =   True
+      LockRight       =   False
+      LockTop         =   True
+      LockVertical    =   False
+      Multiline       =   False
+      Scope           =   0
+      Style           =   "518640185"
+      TabOrder        =   47
+      Text            =   "Membership expires on:"
+      TextAlign       =   3
+      Top             =   2
+      VerticalCenter  =   0
+      Visible         =   True
+      Width           =   172
+      ZIndex          =   1
+      _DeclareLineRendered=   False
+      _HorizontalPercent=   0.0
+      _IsEmbedded     =   False
+      _Locked         =   False
+      _NeedsRendering =   True
+      _OfficialControl=   False
+      _OpenEventFired =   False
+      _VerticalPercent=   0.0
+   End
+   Begin WebTextField txtMemExpires
+      AutoCapitalize  =   True
+      AutoComplete    =   True
+      AutoCorrect     =   True
+      CueText         =   ""
+      Cursor          =   0
+      Enabled         =   True
+      HasFocusRing    =   True
+      Height          =   22
+      HelpTag         =   ""
+      HorizontalCenter=   0
+      Index           =   -2147483648
+      Left            =   649
+      LimitText       =   0
+      LockBottom      =   False
+      LockedInPosition=   False
+      LockHorizontal  =   False
+      LockLeft        =   True
+      LockRight       =   False
+      LockTop         =   True
+      LockVertical    =   False
+      Password        =   False
+      ReadOnly        =   False
+      Scope           =   0
+      Style           =   "518640185"
+      TabOrder        =   2
+      Text            =   ""
+      TextAlign       =   0
+      Top             =   2
+      Type            =   0
+      VerticalCenter  =   0
+      Visible         =   True
+      Width           =   241
+      ZIndex          =   1
+      _DeclareLineRendered=   False
+      _HorizontalPercent=   0.0
+      _IsEmbedded     =   False
+      _Locked         =   False
+      _NeedsRendering =   True
+      _OfficialControl=   False
+      _OpenEventFired =   False
       _VerticalPercent=   0.0
    End
 End
@@ -3040,11 +3183,16 @@ End
 		  
 		  Session.gnPersonID = lnPid
 		  
-		  lsSql = "Select * from trakdata.tblPeople where PersonID = " + Str(lnPid)
+		  lsSql = "SELECT tblpeople.*, tblmembership.ValidTo FROM tblPeople LEFT JOIN tblmembership " +_
+		  "ON tblPeople.PersonID = tblmembership.PersonID WHERE tblPeople.PersonID = " + Str(lnPid)
 		  
 		  rs = Session.sesAspeDB.SQLSelect(lsSql)
 		  
 		  if Session.sesAspeDB.CheckDBError then return
+		  
+		  if rs.Field("ValidTo").Value <> Nil  then
+		    txtMemExpires.Text = ChkStr(rs.Field("ValidTo").DateValue.LongDate)
+		  end
 		  
 		  cboChapterName.SetPopMenuValue( ChkStr(rs.Field("ChapterName").StringValue))
 		  frmUpdateInfo.msPreviousChapter = ChkStr(rs.Field("ChapterName").StringValue)
@@ -3210,7 +3358,10 @@ End
 		  
 		  msPidsHL = session.gnPid.ToText
 		  
-		  DoPushPID
+		  DoPushPID 'HL
+		  
+		  UpdateUser(Session.gnPersonID.ToText, frmUpdateInfo.mbIsMember)
+		  
 		  
 		  
 		  btnSave.Enabled = False
@@ -3626,11 +3777,23 @@ End
 		  '
 		  '
 		  'else
+		  me.Enabled = False
+		  
+		  App.DoEvents
+		  
 		  Session.ConfirmMessage = ""
 		  
 		  SaveButtonPressed
-		  'end
 		  
+		  
+		  ProgWh.Visible = False
+		  
+		  
+		End Sub
+	#tag EndEvent
+	#tag Event
+		Sub MouseDown(X As Integer, Y As Integer, Details As REALbasic.MouseEvent)
+		  ProgWh.Visible = True
 		  
 		End Sub
 	#tag EndEvent
@@ -3653,6 +3816,21 @@ End
 		  chkTexting.Value = True
 		  SaveButtonPressed
 		  return
+		End Sub
+	#tag EndEvent
+#tag EndEvents
+#tag Events Timer1
+	#tag Event
+		Sub Action()
+		  ProgWh.Visible = True
+		End Sub
+	#tag EndEvent
+#tag EndEvents
+#tag Events txtMemExpires
+	#tag Event
+		Sub LostFocus()
+		  Call DidValidate(Me)
+		  
 		End Sub
 	#tag EndEvent
 #tag EndEvents
