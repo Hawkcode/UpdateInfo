@@ -534,9 +534,9 @@ Class cSmartSQL
 		    return Quote(sValue, bAutoQuote)
 		  end select
 		  
-		exception err as TypeMismatchException
-		  'the value couldn't be converted to a string
-		  raise new cInvalidValueException
+		  exception err as TypeMismatchException
+		    'the value couldn't be converted to a string
+		    raise new cInvalidValueException
 		End Function
 	#tag EndMethod
 
@@ -724,6 +724,11 @@ Class cSmartSQL
 			Group="Position"
 			InitialValue="0"
 			Type="Integer"
+		#tag EndViewProperty
+		#tag ViewProperty
+			Name="StatementType"
+			Group="Behavior"
+			Type="eStatementType"
 		#tag EndViewProperty
 	#tag EndViewBehavior
 End Class

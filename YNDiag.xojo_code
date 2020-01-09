@@ -155,9 +155,10 @@ Begin WebDialog YNDiag
       LockVertical    =   False
       Multiline       =   True
       Scope           =   0
-      Style           =   "-1"
+      Style           =   "0"
       TabOrder        =   3
       Text            =   "Untitled"
+      TextAlign       =   0
       Top             =   28
       VerticalCenter  =   0
       Visible         =   True
@@ -239,7 +240,7 @@ End
 		Type="Integer"
 		EditorType="Enum"
 		#tag EnumValues
-			"0 - Auto"
+			"0 - Automatic"
 			"1 - Standard Pointer"
 			"2 - Finger Pointer"
 			"3 - IBeam"
@@ -250,10 +251,10 @@ End
 			"8 - Arrow South"
 			"9 - Arrow East"
 			"10 - Arrow West"
-			"11 - Arrow North East"
-			"12 - Arrow North West"
-			"13 - Arrow South East"
-			"14 - Arrow South West"
+			"11 - Arrow Northeast"
+			"12 - Arrow Northwest"
+			"13 - Arrow Southeast"
+			"14 - Arrow Southwest"
 			"15 - Splitter East West"
 			"16 - Splitter North South"
 			"17 - Progress"

@@ -269,6 +269,36 @@ Inherits MySQLCommunityServer
 			InitialValue="0"
 			Type="Integer"
 		#tag EndViewProperty
+		#tag ViewProperty
+			Name="gnDBPort"
+			Group="Behavior"
+			InitialValue="3306"
+			Type="Integer"
+		#tag EndViewProperty
+		#tag ViewProperty
+			Name="gsDatabaseName"
+			Group="Behavior"
+			InitialValue="trakdata"
+			Type="String"
+		#tag EndViewProperty
+		#tag ViewProperty
+			Name="gsHost"
+			Group="Behavior"
+			InitialValue="127.0.0.1"
+			Type="String"
+		#tag EndViewProperty
+		#tag ViewProperty
+			Name="gsPassword"
+			Group="Behavior"
+			InitialValue="fr3eCave97"
+			Type="String"
+		#tag EndViewProperty
+		#tag ViewProperty
+			Name="gsUserName"
+			Group="Behavior"
+			InitialValue="aspe_user"
+			Type="String"
+		#tag EndViewProperty
 	#tag EndViewBehavior
 End Class
 #tag EndClass

@@ -14,6 +14,11 @@ Inherits RuntimeException
 
 	#tag ViewBehavior
 		#tag ViewProperty
+			Name="Reason"
+			Group="Behavior"
+			Type="Text"
+		#tag EndViewProperty
+		#tag ViewProperty
 			Name="ErrorNumber"
 			Group="Behavior"
 			InitialValue="0"
