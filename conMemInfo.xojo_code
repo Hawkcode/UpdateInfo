@@ -2608,7 +2608,7 @@ Begin WebContainer conMemInfo
       LockTop         =   True
       LockVertical    =   False
       Password        =   False
-      ReadOnly        =   False
+      ReadOnly        =   True
       Scope           =   0
       Style           =   "1951204359"
       TabOrder        =   4
@@ -2949,7 +2949,7 @@ Begin WebContainer conMemInfo
       HelpTag         =   ""
       HorizontalCenter=   0
       Index           =   -2147483648
-      Left            =   480
+      Left            =   479
       LockBottom      =   False
       LockedInPosition=   False
       LockHorizontal  =   False
@@ -3194,6 +3194,8 @@ End
 		    txtMemExpires.Text = ChkStr(rs.Field("ValidTo").DateValue.LongDate)
 		  end
 		  
+		  frmUpdateInfo.txtMemNumber.Text = rs.Field("MemberNumber").StringValue
+		  
 		  cboChapterName.SetPopMenuValue( ChkStr(rs.Field("ChapterName").StringValue))
 		  frmUpdateInfo.msPreviousChapter = ChkStr(rs.Field("ChapterName").StringValue)
 		  frmUpdateInfo.msPreviousChapterCode = ChkStr(rs.Field("ChapterCode").StringValue)
@@ -3429,7 +3431,7 @@ End
 		  
 		  
 		  oSQL.AddFields              "Email",             "AlternateEmail" ,          "DateUpdated",     "UpdatedBy", "NameSuffix" ,   "CellPhone" ,          "BadgeName"
-		  oSQL.AddValues txtPrimaryEmail.Text, txtSecondaryEmail.Text, Today.SQLDate,  "WebSite", txtNameSuffix.Text, txtPhoneCell.Text, txtBadge.Text
+		  oSQL.AddValues txtPrimaryEmail.Text, txtSecondaryEmail.Text, Today.SQLDateTime,  "WebSite", txtNameSuffix.Text, txtPhoneCell.Text, txtBadge.Text
 		  
 		  
 		  oSQL.AddFields  "ASHRAE",             "ASSE",             "PHCC",              "PCA",         "MCCA",          "IAPMO",                  "ICC"
@@ -3755,6 +3757,9 @@ End
 		    SetReadOnly(Self, True)
 		    me.Caption = "Cancel"
 		    btnSave.Enabled = True
+		    txtMemExpires.ReadOnly = True
+		    txtLast.ReadOnly = True
+		    frmUpdateInfo.txtMemNumber.ReadOnly = True
 		    txtTitle.SetFocus
 		  else
 		    btnSave.Enabled = False
@@ -3873,6 +3878,7 @@ End
 		Group="Behavior"
 		InitialValue="True"
 		Type="Boolean"
+		EditorType=""
 	#tag EndViewProperty
 	#tag ViewProperty
 		Name="Height"
@@ -3880,18 +3886,23 @@ End
 		Group="Behavior"
 		InitialValue="300"
 		Type="Integer"
+		EditorType=""
 	#tag EndViewProperty
 	#tag ViewProperty
 		Name="HelpTag"
 		Visible=true
 		Group="Behavior"
+		InitialValue=""
 		Type="String"
 		EditorType="MultiLineEditor"
 	#tag EndViewProperty
 	#tag ViewProperty
 		Name="HorizontalCenter"
+		Visible=false
 		Group="Behavior"
+		InitialValue=""
 		Type="Integer"
+		EditorType=""
 	#tag EndViewProperty
 	#tag ViewProperty
 		Name="Index"
@@ -3899,6 +3910,7 @@ End
 		Group="ID"
 		InitialValue="-2147483648"
 		Type="Integer"
+		EditorType=""
 	#tag EndViewProperty
 	#tag ViewProperty
 		Name="Left"
@@ -3906,12 +3918,15 @@ End
 		Group="Position"
 		InitialValue="0"
 		Type="Integer"
+		EditorType=""
 	#tag EndViewProperty
 	#tag ViewProperty
 		Name="lnErrorCount"
+		Visible=false
 		Group="Behavior"
 		InitialValue="-1"
 		Type="Integer"
+		EditorType=""
 	#tag EndViewProperty
 	#tag ViewProperty
 		Name="LockBottom"
@@ -3919,6 +3934,7 @@ End
 		Group="Behavior"
 		InitialValue="False"
 		Type="Boolean"
+		EditorType=""
 	#tag EndViewProperty
 	#tag ViewProperty
 		Name="LockHorizontal"
@@ -3926,6 +3942,7 @@ End
 		Group="Behavior"
 		InitialValue="False"
 		Type="Boolean"
+		EditorType=""
 	#tag EndViewProperty
 	#tag ViewProperty
 		Name="LockLeft"
@@ -3933,6 +3950,7 @@ End
 		Group="Behavior"
 		InitialValue="True"
 		Type="Boolean"
+		EditorType=""
 	#tag EndViewProperty
 	#tag ViewProperty
 		Name="LockRight"
@@ -3940,6 +3958,7 @@ End
 		Group="Behavior"
 		InitialValue="False"
 		Type="Boolean"
+		EditorType=""
 	#tag EndViewProperty
 	#tag ViewProperty
 		Name="LockTop"
@@ -3947,6 +3966,7 @@ End
 		Group="Behavior"
 		InitialValue="True"
 		Type="Boolean"
+		EditorType=""
 	#tag EndViewProperty
 	#tag ViewProperty
 		Name="LockVertical"
@@ -3954,32 +3974,45 @@ End
 		Group="Behavior"
 		InitialValue="False"
 		Type="Boolean"
+		EditorType=""
 	#tag EndViewProperty
 	#tag ViewProperty
 		Name="mbIsCPD"
+		Visible=false
 		Group="Behavior"
+		InitialValue=""
 		Type="Boolean"
+		EditorType=""
 	#tag EndViewProperty
 	#tag ViewProperty
 		Name="mbIsCPDT"
+		Visible=false
 		Group="Behavior"
+		InitialValue=""
 		Type="Boolean"
+		EditorType=""
 	#tag EndViewProperty
 	#tag ViewProperty
 		Name="msEmail"
+		Visible=false
 		Group="Behavior"
+		InitialValue=""
 		Type="String"
 		EditorType="MultiLineEditor"
 	#tag EndViewProperty
 	#tag ViewProperty
 		Name="msNameSuffix"
+		Visible=false
 		Group="Behavior"
+		InitialValue=""
 		Type="String"
 		EditorType="MultiLineEditor"
 	#tag EndViewProperty
 	#tag ViewProperty
 		Name="msRegion"
+		Visible=false
 		Group="Behavior"
+		InitialValue=""
 		Type="String"
 		EditorType="MultiLineEditor"
 	#tag EndViewProperty
@@ -3987,7 +4020,9 @@ End
 		Name="Name"
 		Visible=true
 		Group="ID"
+		InitialValue=""
 		Type="String"
+		EditorType=""
 	#tag EndViewProperty
 	#tag ViewProperty
 		Name="ScrollbarsVisible"
@@ -4008,7 +4043,9 @@ End
 		Name="Super"
 		Visible=true
 		Group="ID"
+		InitialValue=""
 		Type="String"
+		EditorType=""
 	#tag EndViewProperty
 	#tag ViewProperty
 		Name="TabOrder"
@@ -4016,6 +4053,7 @@ End
 		Group="Behavior"
 		InitialValue="0"
 		Type="Integer"
+		EditorType=""
 	#tag EndViewProperty
 	#tag ViewProperty
 		Name="Top"
@@ -4023,11 +4061,15 @@ End
 		Group="Position"
 		InitialValue="0"
 		Type="Integer"
+		EditorType=""
 	#tag EndViewProperty
 	#tag ViewProperty
 		Name="VerticalCenter"
+		Visible=false
 		Group="Behavior"
+		InitialValue=""
 		Type="Integer"
+		EditorType=""
 	#tag EndViewProperty
 	#tag ViewProperty
 		Name="Visible"
@@ -4035,6 +4077,7 @@ End
 		Group="Behavior"
 		InitialValue="True"
 		Type="Boolean"
+		EditorType=""
 	#tag EndViewProperty
 	#tag ViewProperty
 		Name="Width"
@@ -4042,59 +4085,86 @@ End
 		Group="Behavior"
 		InitialValue="300"
 		Type="Integer"
+		EditorType=""
 	#tag EndViewProperty
 	#tag ViewProperty
 		Name="ZIndex"
+		Visible=false
 		Group="Behavior"
 		InitialValue="1"
 		Type="Integer"
+		EditorType=""
 	#tag EndViewProperty
 	#tag ViewProperty
 		Name="_DeclareLineRendered"
+		Visible=false
 		Group="Behavior"
 		InitialValue="False"
 		Type="Boolean"
+		EditorType=""
 	#tag EndViewProperty
 	#tag ViewProperty
 		Name="_HorizontalPercent"
+		Visible=false
 		Group="Behavior"
+		InitialValue=""
 		Type="Double"
+		EditorType=""
 	#tag EndViewProperty
 	#tag ViewProperty
 		Name="_IsEmbedded"
+		Visible=false
 		Group="Behavior"
+		InitialValue=""
 		Type="Boolean"
+		EditorType=""
 	#tag EndViewProperty
 	#tag ViewProperty
 		Name="_Locked"
+		Visible=false
 		Group="Behavior"
+		InitialValue=""
 		Type="Boolean"
+		EditorType=""
 	#tag EndViewProperty
 	#tag ViewProperty
 		Name="_NeedsRendering"
+		Visible=false
 		Group="Behavior"
 		InitialValue="True"
 		Type="Boolean"
+		EditorType=""
 	#tag EndViewProperty
 	#tag ViewProperty
 		Name="_OfficialControl"
+		Visible=false
 		Group="Behavior"
 		InitialValue="False"
 		Type="Boolean"
+		EditorType=""
 	#tag EndViewProperty
 	#tag ViewProperty
 		Name="_OpenEventFired"
+		Visible=false
 		Group="Behavior"
+		InitialValue=""
 		Type="Boolean"
+		EditorType=""
 	#tag EndViewProperty
 	#tag ViewProperty
 		Name="_ShownEventFired"
+		Visible=false
 		Group="Behavior"
+		InitialValue=""
 		Type="Boolean"
+		EditorType=""
 	#tag EndViewProperty
 	#tag ViewProperty
 		Name="_VerticalPercent"
+		Visible=false
 		Group="Behavior"
+		InitialValue=""
 		Type="Double"
+		EditorType=""
 	#tag EndViewProperty
 #tag EndViewBehavior
