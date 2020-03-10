@@ -468,8 +468,6 @@ End
 
 #tag EndWindowCode
 
-#tag Events txtMemNumber
-#tag EndEvents
 #tag ViewBehavior
 	#tag ViewProperty
 		Name="Cursor"

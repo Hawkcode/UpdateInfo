@@ -1572,7 +1572,7 @@ Begin WebContainer conMemInfo
       Scope           =   0
       Style           =   "0"
       TabOrder        =   16
-      Top             =   154
+      Top             =   147
       Value           =   False
       VerticalCenter  =   0
       Visible         =   True
@@ -1606,7 +1606,7 @@ Begin WebContainer conMemInfo
       Scope           =   0
       Style           =   "0"
       TabOrder        =   22
-      Top             =   154
+      Top             =   147
       Value           =   False
       VerticalCenter  =   0
       Visible         =   True
@@ -1640,7 +1640,7 @@ Begin WebContainer conMemInfo
       Scope           =   0
       Style           =   "0"
       TabOrder        =   18
-      Top             =   154
+      Top             =   147
       Value           =   False
       VerticalCenter  =   0
       Visible         =   True
@@ -1677,7 +1677,7 @@ Begin WebContainer conMemInfo
       TabOrder        =   68
       Text            =   "Organizations:"
       TextAlign       =   0
-      Top             =   154
+      Top             =   147
       VerticalCenter  =   0
       Visible         =   True
       Width           =   102
@@ -2026,7 +2026,7 @@ Begin WebContainer conMemInfo
       Scope           =   0
       Style           =   "0"
       TabOrder        =   20
-      Top             =   154
+      Top             =   147
       Value           =   False
       VerticalCenter  =   0
       Visible         =   True
@@ -2060,7 +2060,7 @@ Begin WebContainer conMemInfo
       Scope           =   0
       Style           =   "0"
       TabOrder        =   23
-      Top             =   154
+      Top             =   147
       Value           =   False
       VerticalCenter  =   0
       Visible         =   True
@@ -2288,7 +2288,7 @@ Begin WebContainer conMemInfo
       Scope           =   0
       Style           =   "0"
       TabOrder        =   21
-      Top             =   154
+      Top             =   147
       Value           =   False
       VerticalCenter  =   0
       Visible         =   True
@@ -2322,7 +2322,7 @@ Begin WebContainer conMemInfo
       Scope           =   0
       Style           =   "0"
       TabOrder        =   19
-      Top             =   154
+      Top             =   147
       Value           =   False
       VerticalCenter  =   0
       Visible         =   True
@@ -2356,7 +2356,7 @@ Begin WebContainer conMemInfo
       Scope           =   0
       Style           =   "0"
       TabOrder        =   24
-      Top             =   154
+      Top             =   147
       Value           =   False
       VerticalCenter  =   0
       Visible         =   True
@@ -2390,7 +2390,7 @@ Begin WebContainer conMemInfo
       Scope           =   0
       Style           =   "0"
       TabOrder        =   25
-      Top             =   154
+      Top             =   147
       Value           =   False
       VerticalCenter  =   0
       Visible         =   True
@@ -2424,7 +2424,7 @@ Begin WebContainer conMemInfo
       Scope           =   0
       Style           =   "0"
       TabOrder        =   26
-      Top             =   154
+      Top             =   147
       Value           =   False
       VerticalCenter  =   0
       Visible         =   True
@@ -2458,7 +2458,7 @@ Begin WebContainer conMemInfo
       Scope           =   0
       Style           =   "0"
       TabOrder        =   15
-      Top             =   154
+      Top             =   147
       Value           =   False
       VerticalCenter  =   0
       Visible         =   True
@@ -2492,7 +2492,7 @@ Begin WebContainer conMemInfo
       Scope           =   0
       Style           =   "0"
       TabOrder        =   14
-      Top             =   154
+      Top             =   147
       Value           =   False
       VerticalCenter  =   0
       Visible         =   True
@@ -2822,7 +2822,7 @@ Begin WebContainer conMemInfo
       Scope           =   0
       Style           =   "1710913587"
       TabOrder        =   8
-      Top             =   130
+      Top             =   128
       Value           =   False
       VerticalCenter  =   0
       Visible         =   True
@@ -3010,6 +3010,76 @@ Begin WebContainer conMemInfo
       VerticalCenter  =   0
       Visible         =   True
       Width           =   241
+      ZIndex          =   1
+      _DeclareLineRendered=   False
+      _HorizontalPercent=   0.0
+      _IsEmbedded     =   False
+      _Locked         =   False
+      _NeedsRendering =   True
+      _OfficialControl=   False
+      _OpenEventFired =   False
+      _VerticalPercent=   0.0
+   End
+   Begin WebLabel lblSponser1
+      Cursor          =   1
+      Enabled         =   True
+      HasFocusRing    =   True
+      Height          =   22
+      HelpTag         =   ""
+      HorizontalCenter=   0
+      Index           =   -2147483648
+      Left            =   20
+      LockBottom      =   False
+      LockedInPosition=   False
+      LockHorizontal  =   False
+      LockLeft        =   True
+      LockRight       =   False
+      LockTop         =   True
+      LockVertical    =   False
+      Multiline       =   True
+      Scope           =   0
+      Style           =   "0"
+      TabOrder        =   51
+      Text            =   "Join Women of ASPE (WOA) special interest group?"
+      TextAlign       =   0
+      Top             =   170
+      VerticalCenter  =   0
+      Visible         =   True
+      Width           =   352
+      ZIndex          =   1
+      _DeclareLineRendered=   False
+      _HorizontalPercent=   0.0
+      _IsEmbedded     =   False
+      _Locked         =   False
+      _NeedsRendering =   True
+      _OfficialControl=   False
+      _OpenEventFired =   False
+      _VerticalPercent=   0.0
+   End
+   Begin WebCheckbox chkJoinWOA
+      Caption         =   "Yes"
+      Cursor          =   1
+      Enabled         =   True
+      Height          =   22
+      HelpTag         =   ""
+      HorizontalCenter=   0
+      Index           =   -2147483648
+      Left            =   354
+      LockBottom      =   False
+      LockedInPosition=   False
+      LockHorizontal  =   False
+      LockLeft        =   True
+      LockRight       =   False
+      LockTop         =   True
+      LockVertical    =   False
+      Scope           =   0
+      Style           =   "0"
+      TabOrder        =   54
+      Top             =   168
+      Value           =   False
+      VerticalCenter  =   0
+      Visible         =   True
+      Width           =   61
       ZIndex          =   1
       _DeclareLineRendered=   False
       _HorizontalPercent=   0.0
@@ -3236,6 +3306,7 @@ End
 		    txtBDayYear.Text = Str(ldDate.Year)
 		  end
 		  
+		  chkJoinWOA.Value = rs.Field("WOA").BooleanValue
 		  chkASHRAE.Value =rs.Field("ASHRAE").BooleanValue
 		  chkASSE.Value = rs.Field("ASSE").BooleanValue
 		  chkNSPE.Value = rs.Field("NSPE").BooleanValue
@@ -3425,6 +3496,8 @@ End
 		  oSQL.AddFields  "PCompany",            "PAddress1",                 "PCity",               "PState",              "PZip",               "PCountry",             "PPhone"
 		  oSQL.AddValues txtPCompany.Text,  txtPAddress1.Text, txtPCity.Text, txtPState.Text, txtPZip.Text, txtPCountry.Text, txtPPhone.Text
 		  
+		  oSQL.AddFields "WOA"
+		  oSQL.AddValues chkJoinWOA.Value
 		  
 		  oSQL.AddFields  "SCompany",                  "SAddress1",             "SCity",          "SState ",          "SZip",          "SCountry",             "SPhone"
 		  oSQL.AddValues txtSCompany.Text, txtSAddress1.Text, txtSCity.Text, txtSState.Text, txtSZip.Text, txtSCountry.Text, txtSPhone.Text
