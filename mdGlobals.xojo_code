@@ -65,6 +65,25 @@ Protected Module mdGlobals
 	#tag EndMethod
 
 	#tag Method, Flags = &h0
+		Function CleanEmail(lsEmail As String) As String
+		  Dim lnPos, lnLen, lnResult As Integer
+		  
+		  lnPos = lsEmail.InStr(0, ".mch")
+		  lnLen = lsEmail.Len
+		  lnResult =  lnLen - lnPos
+		  '10 15
+		  if lnResult < 6 then
+		    
+		    return lsEmail.mid(0, lnPos )
+		  else
+		    
+		    Return lsEmail
+		    
+		  end
+		End Function
+	#tag EndMethod
+
+	#tag Method, Flags = &h0
 		Sub CreatePrintPreferences()
 		  Dim BinStream as BinaryStream
 		  Dim theString as String

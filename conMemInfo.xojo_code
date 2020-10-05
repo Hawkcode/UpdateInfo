@@ -3181,7 +3181,7 @@ End
 		    
 		  Case "txtPrimaryEmail", "txtSecondaryEmail"
 		    
-		    If not ValidateEmail(lbObj.Text) then
+		    If not ValidateEmail(CleanEmail(lbObj.Text)) then
 		      lbObj.Style = EntryFieldsError
 		      lbValid = False
 		    end
@@ -3847,7 +3847,11 @@ End
 #tag Events btnSave
 	#tag Event
 		Sub Action()
-		  If not ValidateAll then return
+		  If not ValidateAll then 
+		    MsgBox("There is an error in the field outlined in red!")
+		    ProgWh.Visible = False
+		    return
+		  end
 		  
 		  'if frmUpdateInfo.mbIsMember and txtPhoneCell.text <> "" then
 		  '

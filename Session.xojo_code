@@ -15,25 +15,19 @@ Inherits WebSession
 		    exit
 		  end
 		  
-		  sesWebDB = New WebDB
-		  if not sesWebDB.OpenDB then
-		    MsgBox("Unable to connect to ASPE's web server, Please try later.")
-		    exit
-		  end
+		  'sesWebDB = New WebDB
+		  'if not sesWebDB.OpenDB then
+		  'MsgBox("Unable to connect to ASPE's web server, Please try later.")
+		  'exit
+		  'end
 		  
-		  If URLParameter("uid") <> "" then
-		    
-		    // run some code  if not finale release
-		    gnUid = URLParameter("uid").Val
-		    gnPid = GetPID(gnUid)
-		  else
-		    If URLParameter("pid") = "" then
-		      MsgBox("Need parameter uid or pid!")
-		      Return
-		    end
-		    gnPid = URLParameter("pid").Val
-		    
+		  
+		  If URLParameter("pid") = "" then
+		    MsgBox("Need parameter uid or pid!")
+		    Return
 		  end
+		  gnPid = URLParameter("pid").Val
+		  
 		  
 		  
 		  
@@ -41,7 +35,7 @@ Inherits WebSession
 		  'MsgBox("Web UserID = " + Str(gnPid))
 		  
 		  
-		  Self.Timeout = 600
+		  Self.Timeout = 1800  '30 Min
 		  
 		End Sub
 	#tag EndEvent

@@ -284,8 +284,8 @@ End
 #tag WindowCode
 	#tag Event
 		Sub Close()
-		  App.Quit
-		  Session.Quit
+		  'App.Quit
+		  'Session.Quit
 		End Sub
 	#tag EndEvent
 
